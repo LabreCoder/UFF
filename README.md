@@ -24,6 +24,7 @@ Este espaço será dedicado ao registro das minhas resoluções para os exercíc
 Este repositório utiliza as seguintes tecnologias principais:
 
 - **Python** - Linguagem principal para desenvolvimento de algoritmos e estruturas de dados
+- **Java** - Linguagem principal para aprendizado de POO
 - **C** - Linguagem de programação de baixo nível para exercícios de fundamentos
 - **SQL** - Linguagem para consultas e manipulação de banco de dados
 
@@ -32,26 +33,24 @@ Este repositório utiliza as seguintes tecnologias principais:
 ```
 ambiente-universitario/
 ├── README.md
-├── python/
-│   ├── exercicios/
-│   │   ├── estruturas-dados/
-│   │   ├── algoritmos/
-│   │   └── poo/
+├── C/
+│   ├── Estrutura de Dados I/
+│   │   ├── Aula_01/
+│   │   ├── Aula_02/
+│           └── exercicio_01.c
+│   
+├── Java/
+│   ├── POO/
+│   │   ├── Aula 01/
+│   │       ├── README.md
+│   │       └── Exercicio_01.java
 │   └── projetos/
-├── c/
-│   ├── exercicios/
-│   │   ├── fundamentos/
-│   │   ├── ponteiros/
-│   │   └── estruturas/
-│   └── projetos/
-├── sql/
-│   ├── exercicios/
-│   │   ├── consultas-basicas/
-│   │   ├── joins/
-│   │   └── procedures/
-│   └── projetos/
-└── docs/
-    └── materiais-apoio/
+├── SQL/
+│   ├── Banco de Dados/
+│   │   ├── Aula 01/
+│   │       ├── exercicios/
+│               └── ER_01.draw   
+└── 
 ```
 
 ## 🚀 Como Usar
@@ -60,8 +59,8 @@ Este repositório é organizado de forma didática para facilitar a navegação 
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/ambiente-universitario.git
-   cd ambiente-universitario
+   git clone https://github.com/LabreCoder/UFF.git
+   cd UFF
    ```
 
 2. **Navegue pelas pastas:**

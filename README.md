@@ -2,8 +2,9 @@
 
 > Aqui será um ambiente em que irei postar as minhas resoluções para os exercícios propostos durante o curso, além de abordar os Projetos que fiz parte.
 
-[![Status](https://img.shields.io/badge/Status-Em%20Andamento-yellow.svg)](https://github.com/seu-usuario/ambiente-universitario)
+[![Status](https://img.shields.io/badge/Status-Em%20Andamento-yellow.svg)](https://github.com/LabreCoder/UFF)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
+[![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white)](https://www.java.com)
 [![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
 [![SQL](https://img.shields.io/badge/SQL-336791?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org)
 
@@ -31,26 +32,26 @@ Este repositório utiliza as seguintes tecnologias principais:
 ## 📁 Estrutura do Projeto
 
 ```
-ambiente-universitario/
+UFF/
 ├── README.md
 ├── C/
 │   ├── Estrutura de Dados I/
 │   │   ├── Aula_01/
-│   │   ├── Aula_02/
-│           └── exercicio_01.c
-│   
+│   └── ├── Aula_02/
+│           └── exercicio_01.c   
 ├── Java/
 │   ├── POO/
-│   │   ├── Aula 01/
+│   │   └── Aula 01/
 │   │       ├── README.md
 │   │       └── Exercicio_01.java
 │   └── projetos/
 ├── SQL/
 │   ├── Banco de Dados/
 │   │   ├── Aula 01/
-│   │       ├── exercicios/
-│               └── ER_01.draw   
-└── 
+│   └──      ├── exercicios/
+|             └── ER_01.draw
+└── projetos
+
 ```
 
 ## 🚀 Como Usar
@@ -113,7 +114,7 @@ Este projeto é de uso educacional e está disponível sob a [MIT License](LICEN
 
 **João Victor Labre Machado**
 
-- 💼 LinkedIn: [João Victor Labre](https://www.linkedin.com/in/jo%C3%A3o-victor-labre-16b35025a)
+- 💼 LinkedIn: [João Victor Labre](https://www.linkedin.com/in/joão-victor-labre)
 - 📧 Entre em contato para discussões acadêmicas ou colaborações
 
 ---

@@ -12,6 +12,6 @@
 
 ### Link para a aula anterior
 
-- *[Aula 01](/Aula%2001/README.md)*
+- Retornar para *[Aula 01](/Aula%2001/README.md)*.
 
 - Caso queira ver o conteúdo da aula seguinte, basta clicar <b>[aqui](/Aula%2003/README.md)</b>.

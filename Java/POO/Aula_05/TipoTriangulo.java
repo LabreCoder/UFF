@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TipoTriangulo { 
+public class TipoTriangulo { // iremos descobrir se é um Triângulo e qual o seu tipo
     public static void main(String[] args){ 
         Scanner teclado = new Scanner(System.in);
         int a, b, c;

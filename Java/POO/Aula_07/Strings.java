@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Strings{ // 
+public class Strings{ // Manipulação básica de strings
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.print("Digite uma frase: ");

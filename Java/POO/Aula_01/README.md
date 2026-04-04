@@ -10,4 +10,4 @@
 
 ### Links
 
-- Caso queira ver o conteúdo da aula seguinte, basta clicar <b>[aqui](/Aula_02/README.md)</b>.
+- Caso queira ver o conteúdo da aula seguinte, basta clicar <b>[aqui](../Aula_02/README.md)</b>.

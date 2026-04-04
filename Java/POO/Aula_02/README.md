@@ -6,9 +6,9 @@
 
 ### Exemplos
 
-- Existem alguns padrões para o Java, um exemplo para isso seriam os nomes das classes <b>*[class](/Aula_02/class.md)*</b>.
+- Existem alguns padrões para o Java, um exemplo para isso seriam os nomes das classes <b>*[class](../Aula_02/class.md)*</b>.
 
-- Outro exemplo bem comum seria entender o que são os <b>*[métodos](/Aula_02/metodos.md)*</b>, <b>*[static](/Aula_02/static.md)*</b> e até mesmo o <b>*[bloco](/Aula_02/bloco.md)*</b>.
+- Outro exemplo bem comum seria entender o que são os <b>*[métodos](../Aula_02/metodos.md)*</b>, <b>*[static](../Aula_02/static.md)*</b> e até mesmo o <b>*[bloco](../Aula_02/bloco.md)*</b>.
 
 ### Link para a aula anterior
 

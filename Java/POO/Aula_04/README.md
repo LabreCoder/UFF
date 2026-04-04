@@ -65,6 +65,6 @@ Também temos os operadores de verificação:
 
 ### Link para a aula anterior
 
-- Retornar para *[Aula 03](/Aula_03/README.md)*.
+- Retornar para *[Aula 03](../Aula_03/README.md)*.
 
-- Caso queira ver o conteúdo da aula seguinte, basta clicar <b>[aqui](/Aula_05/README.md)</b>.
+- Caso queira ver o conteúdo da aula seguinte, basta clicar <b>[aqui](../Aula_05/README.md)</b>.

@@ -1,0 +1,30 @@
+No.     Time           Source                Destination           Protocol Length Info
+    250 2.629415266    128.119.245.12        192.168.X.X           HTTP     648    HTTP/1.1 301 Moved Permanently  (text/html)
+
+Frame 250: 648 bytes on wire (5184 bits), 648 bytes captured (5184 bits) on interface enxXXX, id 0
+Ethernet II, Src: HuaweiDevice_19:a5:24 (XX:XX:XX:XX:XX:XX), Dst: UgreenGroup_58:26:95 (XX:XX:XX:XX:XX:XX)
+Internet Protocol Version 4, Src: 128.119.245.12, Dst: 192.168.X.X
+Transmission Control Protocol, Src Port: 80, Dst Port: XXXXX, Seq: 1305, Ack: 913, Len: 582
+Hypertext Transfer Protocol
+    HTTP/1.1 301 Moved Permanently\r\n
+        [Expert Info (Chat/Sequence): HTTP/1.1 301 Moved Permanently\r\n]
+        Response Version: HTTP/1.1
+        Status Code: 301
+        [Status Code Description: Moved Permanently]
+        Response Phrase: Moved Permanently
+    Date: Fri, 10 Apr 2026 21:57:29 GMT\r\n
+    Server: Apache
+    Location: https://gaia.cs.umass.edu//pearson.png\r\n
+    Content-Length: 246\r\n
+    Keep-Alive: timeout=5, max=99\r\n
+    Connection: Keep-Alive\r\n
+    Content-Type: text/html; charset=iso-8859-1\r\n
+    \r\n
+    [HTTP response 2/2]
+    [Time since request: 0.145345066 seconds]
+    [Prev request in frame: 190]
+    [Prev response in frame: 217]
+    [Request in frame: 235]
+    [Request URI: http://gaia.cs.umass.edu/pearson.png]
+    File Data: 246 bytes
+Line-based text data: text/html (7 lines)

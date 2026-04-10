@@ -1,0 +1,24 @@
+No.     Time           Source                Destination           Protocol Length Info
+    270 2.866073006    192.168.X.X           2.56.99.24            HTTP     462    GET /8E_cover_small.jpg HTTP/1.1 
+
+Frame 270: 462 bytes on wire (3696 bits), 462 bytes captured (3696 bits) on interface enxXXX, id 0
+Ethernet II, Src: UgreenGroup_58:26:95 (XX:XX:XX:XX:XX:XX), Dst: HuaweiDevice_19:a5:24 (XX:XX:XX:XX:XX:XX)
+Internet Protocol Version 4, Src: 192.168.X.X, Dst: 2.56.99.24
+Transmission Control Protocol, Src Port: XXXXX, Dst Port: 80, Seq: 1, Ack: 1, Len: 396
+Hypertext Transfer Protocol
+    GET /8E_cover_small.jpg HTTP/1.1\r\n
+        [Expert Info (Chat/Sequence): GET /8E_cover_small.jpg HTTP/1.1\r\n]
+        Request Method: GET
+        Request URI: /8E_cover_small.jpg
+        Request Version: HTTP/1.1
+    Host: kurose.cslash.net\r\n
+    Connection: keep-alive\r\n
+    User-Agent: Mozilla/5.0 (X11; Linux x86_64)
+    Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\n
+    Referer: http://gaia.cs.umass.edu/\r\n
+    Accept-Encoding: gzip, deflate\r\n
+    Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+    \r\n
+    [Full request URI: http://kurose.cslash.net/8E_cover_small.jpg]
+    [HTTP request 1/1]
+    [Response in frame: 964]

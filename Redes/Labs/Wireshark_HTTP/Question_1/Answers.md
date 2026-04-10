@@ -12,7 +12,7 @@ Basta acessar o aplicativo e selecionar sua conexão com a internet, seja ela vi
 
 Primeiro eu realizei um filtro para <b>*'http'*</b>:
 
-- Assim como aparece na imagem: [filtro http](/Wireshark_HTTP/Question_1/imagem_filtro.png)
+- Assim como aparece na imagem: [filtro http](../Redes/Labs/Wireshark_HTTP/imagem_filtro.png)
 
 Após isso, basta colar o link abaixo no navegador:
 > <b>*http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file1.html*</b> 
@@ -32,15 +32,15 @@ Ctrl + Shift + R
 
 ### 3. Salvar resultados HTTP
 
-Se quiser orientações sobre como fazer isso, basta clicar *[aqui](/Wireshark_HTTP/README.md)*.
+Se quiser orientações sobre como fazer isso, basta clicar *[aqui](/Redes/Labs/Wireshark_HTTP/README.md)*.
 
 <hr>
 
 ### 4. Acessar meus arquivos
 
-> Você pode acessar o [Request](/Wireshark_HTTP/Question_1/Request.txt).
+> Você pode acessar o [Request](/Labs/Wireshark_HTTP/Question_1/Request.txt).
 
-> Você pode acessar o [Response](/Wireshark_HTTP/Question_1/Response.txt).
+> Você pode acessar o [Response](../Labs/Wireshark_HTTP/Question_1/Response.txt).
 
 <hr>
 

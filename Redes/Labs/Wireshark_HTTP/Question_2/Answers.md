@@ -12,7 +12,7 @@ Basta acessar o aplicativo e selecionar sua conexão com a internet, seja ela vi
 
 Primeiro eu realizei um filtro para <b>*'http'*</b>:
 
-- Assim como aparece na imagem: [filtro http](/Redes/Labs/Wireshark_HTTP/Question_1/imagem_filtro.png)
+- Assim como aparece na imagem: [filtro http](/Redes/Labs/Wireshark_HTTP/imagem_filtro.png)
 
 Após isso, basta colar o link abaixo no navegador:
 > <b>*http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file2.html*</b> 

@@ -40,3 +40,7 @@ Após realizar as capturas, o wireshark irá retornar com dois resultados:
 Você pode salvar o resultado HTTP selecionando <b>*Hypertext Transfer Protocol-> File -> Export Packets Dissections -> As Plain Text -> Selected packets only*</b>.
 
 Após realizar esse caminho, coloque o nome do arquivo e salve.
+
+---
+
+*Organizado por [João Victor Labre/LabreCoder](https://github.com/LabreCoder)*

@@ -1,13 +1,21 @@
-## 📆 Data - 09/03/2026    |  📚 Professora: Rebeca    |   👨🏾‍🏫 Aluno: João Victor Labre
+## 📆 Data: 09/03/2026 | 📚 Professora: Rebeca | 👨🏾‍🏫 Aluno: João Victor Labre
 
-### Introdução
+# ☕ Aula 01: Apresentação da Disciplina e Introdução ao Java
 
-- A primeira aula teve foco na apresentação da disciplina, suas avaliações e também da professora.
+### 📝 Introdução
+A primeira aula teve como foco a apresentação do plano de ensino da disciplina, o cronograma de avaliações e as expectativas de aprendizado. Além disso, tivemos o nosso primeiro contato teórico com a linguagem **Java**.
 
-- Nesta aula pudemos ter uma breve noção do que é Java e algumas diferenças entre o C (Linguagem aprendida no período anterior).
+---
 
-<hr>
+### 🔍 Java vs. Linguagem C
+Durante a introdução, discutimos algumas das principais diferenças entre o Java e a Linguagem C (estudada no período anterior):
 
-### Links
+* **Paradigma:** Enquanto o C é uma linguagem puramente estruturada/procedural, o Java foi desenhado desde o início com o foco no paradigma de **Orientação a Objetos**.
+* **Gerenciamento de Memória:** Em C, o programador precisa gerenciar a memória manualmente (usando `malloc` e `free`). No Java, esse processo é automatizado pelo **Garbage Collector** (Coletor de Lixo).
+* **Portabilidade:** Códigos em C geram binários específicos para o sistema operacional onde foram compilados. O Java adota a filosofia *“Write once, run anywhere”* (Escreva uma vez, execute em qualquer lugar), compilando o código para um formato intermediário chamado **Bytecode**, que roda em qualquer máquina que possua a **JVM (Java Virtual Machine)**.
 
-- Caso queira ver o conteúdo da aula seguinte, basta clicar <b>[aqui](../Aula_02/README.md)</b>.
+---
+
+### 🧭 Navegação
+
+* ➡️ **Próxima Aula:** [Aula 02: Características e Boas Práticas](../Aula_02/README.md)

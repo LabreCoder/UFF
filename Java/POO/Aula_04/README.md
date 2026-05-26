@@ -1,70 +1,72 @@
-## 📆 Data - 23/03/2026    |  📚 Professora: Rebeca    |   👨🏾‍🏫 Aluno: João Victor Labre
+## 📆 Data: 23/03/2026 | 📚 Professora: Rebeca | 👨🏾‍🏫 Aluno: João Victor Labre
 
-### Introdução
+# 🧮 Aula 04: Operadores Aritméticos e Relacionais
 
-- Na quarta aula vimos os operadores dentro da programação:
+### 📝 Introdução
+A quarta aula cobriu o funcionamento dos operadores dentro do Java. Eles formam a base para a construção de qualquer lógica, equações matemáticas ou verificações condicionais dentro do software.
 
-### Exemplos
+---
 
-Operadores aritiméticos:
+### 🔢 1. Operadores Aritméticos
+Utilizados para realizar cálculos matemáticos padrão e manipulação de variáveis numéricas:
 
-1. **Adição (+) – soma dois valores**
-- > int resultado = 10 + 5; // resultado = 15
+```java
+// Adição (+) - Soma dois valores
+int soma = 10 + 5; // resultado = 15
 
-2. **Subtração (-) – subtrai um valor do outro**
-- > int resultado = 10 - 5; // resultado = 5
+// Subtração (-) - Subtrai um valor do outro
+int subtracao = 10 - 5; // resultado = 5
 
-3. **Multiplicação (*) – multiplica dois valores**
-- > int resultado = 10 * 5; // resultado = 50
+// Multiplicação (*) - Multiplica dois valores
+int multiplicacao = 10 * 5; // resultado = 50
 
-4. **Divisão (/) – divide um valor pelo outro**
-- > int resultado = 10 / 5; // resultado = 2
+// Divisão (/) - Divide um valor pelo outro
+int divisao = 10 / 5; // resultado = 2
 
-5. **Módulo (%) – retorna o resto da divisão**
-- > int resultado = 10 % 3; // resultado = 1
+// Módulo (%) - Retorna o resto da divisão inteira
+int resto = 10 % 3; // resultado = 1 (pois 10 dividido por 3 dá 3 e sobra 1)
 
-6. **Incremento (++) – aumenta o valor em 1**
-- > int numero = 10; 
-- > numero++; // agora numero = 11
+// Incremento (++) - Soma 1 ao valor atual da variável
+int numeroInc = 10;
+numeroInc++; // agora numeroInc = 11
 
-7. **Decremento (--) – diminui o valor em 1**
-- > int numero = 10;
-- > numero--; // agora numero = 9
+// Decremento (--) - Subtrai 1 ao valor atual da variável
+int numeroDec = 10;
+numeroDec--; // agora numeroDec = 9
+```
 
-Também temos os operadores de verificação:
+---
 
-1. **Igualdade (==) – verifica se dois valores são iguais**
-- > int a = 10;
-- > int b = 10;
-- > boolean resultado = (a == b); // resultado = true
+### ⚖️ 2. Operadores Relacionais (Verificação)
 
-2. **Diferente (!=) – verifica se dois valores são diferentes**
-- > int a = 10;
-- > int b = 5;
-- > boolean resultado = (a != b); // resultado = true
+Utilizados para comparar dois valores. O retorno dessas operações é sempre um valor booleano (`true` ou `false`):
 
-3. **Maior que (>) – verifica se um valor é maior que outro**
-- > int a = 10;
-- > int b = 5;
-- > boolean resultado = (a > b); // resultado = true
+```java
+int a = 10;
+int b = 5;
 
-4. **Menor que (<) – verifica se um valor é menor que outro**
-- > int a = 5;
-- > int b = 10;
-- > boolean resultado = (a < b); // resultado = true
+// Igualdade (==) - Verifica se dois valores são iguais
+boolean eIgual = (a == 10); // true
 
-5. **Maior ou igual (>=) – verifica se um valor é maior ou igual ao outro**
-- > int a = 10;
-- > int b = 10;
-- > boolean resultado = (a >= b); // resultado = true
+// Diferente (!=) - Verifica se dois valores são distintos
+boolean eDiferente = (a != b); // true
 
-6. **Menor ou igual (<=) – verifica se um valor é menor ou igual ao outro**
-- > int a = 5;
-- > int b = 10;
-- > boolean resultado = (a <= b); // resultado = true
+// Maior que (>) - Verifica se o valor da esquerda é maior que o da direita
+boolean eMaior = (a > b); // true
 
-### Link para a aula anterior
+// Menor que (<) - Verifica se o valor da esquerda é menor que o da direita
+boolean eMenor = (b < a); // true
 
-- Retornar para *[Aula 03](../Aula_03/README.md)*.
+// Maior ou igual (>=) - Verifica se é maior ou igual
+boolean eMaiorOuIgual = (a >= 10); // true
 
-- Caso queira ver o conteúdo da aula seguinte, basta clicar <b>[aqui](../Aula_05/README.md)</b>.
+// Menor ou igual (<=) - Verifica se é menor ou igual
+boolean eMenorOuIgual = (b <= a); // true
+```
+
+---
+
+### 🧭 Navegação
+
+* ⬅️ **Aula Anterior:** [Aula 03: Primeiros Passos no Laboratório](../Aula_03/README.md)
+* ➡️ **Próxima Aula:** [Aula 05: Estruturas Condicionais](../Aula_05/README.md)

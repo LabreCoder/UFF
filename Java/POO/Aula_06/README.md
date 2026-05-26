@@ -1,19 +1,51 @@
-## 📆 Data - 30/03/2026 | 📚 Professora: Rebeca | 👨🏾‍🏫 Aluno: João Victor Labre
+## 📆 Data: 30/03/2026 | 📚 Professora: Rebeca | 👨🏾‍🏫 Aluno: João Victor Labre
 
-### Introdução
+# 🔄 Aula 06: Estruturas de Repetição (Laços de Repetição)
 
-- A sexta aula teve como objetivo abordar as estruturas de repetição dentro do Java: <b>while</b> e <b>for</b>, fundamentais para a construção de lógicas que exigem execução contínua ou controlada de determinadas ações. Esses recursos permitem ao programador automatizar tarefas, reduzir redundâncias no código e estruturar soluções de forma mais elegante e eficiente.
+### 📝 Introdução
+A sexta aula teve como objetivo abordar as estruturas de repetição dentro do Java: **while**, **do...while** e **for**. Esses recursos são fundamentais para a construção de lógicas que exigem a execução contínua ou controlada de determinadas ações, permitindo automatizar tarefas, reduzir redundâncias no código e estruturar soluções de forma elegante e eficiente.
 
-### Exemplos
+---
 
-- O <b>while</b> e o <b>for</b> funcionam de forma semelhante ao que já foi visto em Python, porém com a sintaxe e particularidades próprias do Java. Durante a aula, foi possível compreender como cada estrutura se comporta em diferentes cenários, especialmente no controle de fluxos baseados em condições lógicas e contadores. Também foram apresentados exemplos práticos que demonstram quando utilizar cada uma dessas estruturas, reforçando a importância de escolher a abordagem mais adequada para cada situação.
+### 🔍 Estruturas Abordadas e Sintaxe
 
-- Além disso, a professora também comentou sobre o uso do <b>do...while</b>, destacando sua principal diferença em relação ao <b>while</b>: a garantia de que o bloco de código será executado ao menos uma vez antes da verificação da condição. Também foi mencionada a variação conceitual conhecida como <b>while...do</b>, utilizada para fins didáticos de compreensão da ordem de execução, reforçando o entendimento do fluxo lógico das estruturas de repetição.
+O **while** e o **for** funcionam de forma semelhante ao que já foi visto em linguagens como Python, porém com a sintaxe e as particularidades próprias do Java, utilizando chaves `{}` para delimitar o bloco.
 
-- Por fim, foi aprofundado o uso do <b>for</b>, evidenciando sua aplicação em cenários onde se conhece previamente a quantidade de repetições. Destacou-se sua estrutura composta por inicialização, condição e incremento, o que o torna uma ferramenta clara e organizada para laços controlados. A prática demonstrou como o <b>for</b> contribui para um código mais legível e direto, especialmente em operações que envolvem contagens, percursos em listas ou execuções sequenciais bem definidas.
+#### 1. O Laço `while`
+Utilizado quando não sabemos exatamente quantas vezes o bloco de código precisará ser repetido, dependendo puramente de uma condição lógica ser verdadeira.
+```java
+int contador = 0;
+while (contador < 5) {
+    System.out.println("Contagem: " + contador);
+    contador++; // Incremento obrigatório para evitar loop infinito
+}
+```
 
-### Link para a aula anterior
+#### 2. O Laço `do...while`
 
-- Retornar para *[Aula 05](../Aula_05/README.md)*.
+A professora destacou sua principal diferença em relação ao `while` tradicional: a garantia de que o bloco de código será executado **ao menos uma vez** antes da verificação da condição lógica ocorrer.
 
-- Caso queira ver o conteúdo da aula seguinte, basta clicar <b>[aqui](../Aula_07/README.md)</b>.
+```java
+int numero = 10;
+do {
+    System.out.println("Isso será impresso uma vez, mesmo a condição sendo falsa.");
+} while (numero < 5);
+```
+
+#### 3. O Laço `for`
+
+Evidencia sua aplicação em cenários onde se conhece previamente o limite ou a quantidade exata de repetições. Sua estrutura é muito limpa e organizada, pois reúne três conceitos na mesma linha: **inicialização**, **condição** e **incremento**.
+
+```java
+// Ideal para contagens e percursos sequenciais bem definidos
+for (int i = 0; i < 5; i++) {
+    System.out.println("Índice do For: " + i);
+}
+```
+
+---
+
+### 🧭 Navegação
+
+* ⬅️ **Aula Anterior:** [Aula 05: Laboratório Prático de Operadores](../Aula_05/README.md)
+* ➡️ **Próxima Aula:** [Aula 07: Laboratório de Fixação](../Aula_07/README.md)

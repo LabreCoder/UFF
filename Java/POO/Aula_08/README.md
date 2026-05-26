@@ -1,121 +1,126 @@
-## 📆 Data - 06/04/2026    |  📚 Professora: Rebeca    |   👨🏾‍🏫 Aluno: João Victor Labre
+## 📆 Data: 06/04/2026 | 📚 Professora: Rebeca | 👨🏾‍🏫 Aluno: João Victor Labre
 
-### Introdução
+# 📊 Aula 08: Estruturas de Dados — Vetores e Matrizes (Arrays)
 
-- A oitava aula teve como objetivo abordar os **Vetores**, assim como as variáveis compostas **unidimensionais** e també as variáveis compostas **multidimensionais**, como as **Matrizes**.
+### 📝 Introdução
+A oitava aula teve como objetivo compreender o funcionamento das variáveis compostas homogêneas, conhecidas como **Arrays**. Abordamos tanto as estruturas unidimensionais (**Vetores**) quanto as multidimensionais (**Matrizes**). 
 
-- Até o momento já abordarmos alguns objetos, como Scanner, String e agora os **Arrays**.
+Até o momento, trabalhamos com objetos utilitários como `Scanner` e `String`. Agora, avançamos para o uso de Arrays para manipular coleções de dados de forma indexada na memória.
 
-### Exemplos de Vetor
+---
 
-Declaramos os tupos de um vetor e acrescentamos **'[]'** e o nome do vetor, exemplo:
+### 📐 Vetores (Arrays Unidimensionais)
 
-```
-int[] vetor;
+Um vetor é uma estrutura de dados linear que armazena uma coleção de elementos do mesmo tipo, acessíveis por meio de um índice numérico que sempre inicia em `0`.
+
+#### 1. Declaração
+Para declarar um vetor, informamos o tipo dos elementos seguido de colchetes `[]`:
+```java
+int[] vetorDeInteiros;
 float[] notas;
 ```
-<hr>
 
-Precisameros iniciar esse vetor, exemplo:
+#### 2. Inicialização e Definição de Tamanho
 
-```
+É obrigatório definir o tamanho do vetor no momento da criação para que o Java reserve o espaço correto na memória:
+
+```java
+// Forma separada
 float[] notas;
 notas = new float[10];
 
-OU
-
+// Forma direta (Recomendada)
 float[] notas = new float[10];
 ```
 
-<hr>
+> ⚠️ **Nota sobre Valores Default:** Caso você não atribua valores logo após a inicialização, o Java preenche o vetor automaticamente com valores padrão: `0` para tipos numéricos, `false` para `boolean` e `null` para objetos.
 
-Para passar os valores, podemos fazer da seguinte forma: 
+#### 3. Atribuição Direta de Valores
 
+Podemos criar e preencher o vetor simultaneamente utilizando chaves `{}`:
+
+```java
+// O Java infere o tamanho do vetor com base na quantidade de elementos inseridos
+float[] notas = {8.8f, 9.0f, 10.0f}; 
 ```
-notas = {8.8, 9.0, 10.0, ...}
-```
 
-- Caso não seja passado nenhuma informação de valor para esse vetor, ele irá iniciar com o valor default.
+#### 4. Percorrendo o Vetor com `for-each`
 
-Também abordar o **'for each'**, onde temos a estrutura:
+O laço `for-each` é uma sintaxe simplificada para ler todos os elementos de um Array do início ao fim, sem a necessidade de controlar variáveis de índice.
 
-```
-for (int n : v){
-    System.out.println(n);
+```java
+float[] notas = {8.8f, 9.0f, 10.0f};
+
+for (float nota : notas) {
+    System.out.println(nota);
 }
 ```
 
-- Lembrando que nesse caso do <b>*for each*</b>, ele não irá manipular os dados dentro do vetor, apenas realizar uma leitura.
+* **Aviso importante:** O `for-each` serve **apenas para leitura**. Ele não permite modificar ou atualizar os valores armazenados dentro do vetor, apenas acessar uma cópia temporária de cada elemento.
 
-<hr>
+---
 
-### Exemplos de Matriz
+### 🔲 Matrizes (Arrays Multidimensionais)
 
-Declaramos os tipos de uma matriz acrescentando '[][]' ao tipo, indicando duas dimensões:
+Uma matriz é uma estrutura de dados bidimensional, organizada em uma grade composta por **linhas e colunas** (como uma tabela ou planilha).
 
+#### 1. Declaração
+
+Adicionamos dois pares de colchetes `[][]` ao tipo da variável:
+
+```java
+int[][] matrizDeInteiros;
+float[][] tabelaNotas;
 ```
-int[][] matriz;
-float[][] notas;
-```
 
-<hr>
+#### 2. Inicialização
 
-#### Inicialização da matriz
+Devemos especificar o número de linhas (primeiro colchete) e de colunas (segundo colchete):
 
-É necessário definir o tamanho da matriz, informando linhas e colunas:
-
-```
-float[][] notas;
-notas = new float[3][4];
-
-OU
-
+```java
+// Criando uma matriz com 3 linhas e 4 colunas
 float[][] notas = new float[3][4];
 ```
 
-- Nesse exemplo, temos 3 linhas e 4 colunas.
+#### 3. Atribuição de Valores Manual
 
-<hr>
+Podemos preencher a matriz informando cada linha de forma aninhada:
 
-#### Atribuição de valores
-
-Podemos preencher a matriz diretamente:
-
-```
-notas = new float[][] {
-    {8.8, 9.0, 10.0, 7.5},
-    {6.5, 8.0, 9.5, 10.0},
-    {7.0, 7.5, 8.5, 9.0}
+```java
+float[][] notas = new float[][] {
+    {8.8f, 9.0f, 10.0f, 7.5f}, // Linha 0
+    {6.5f, 8.0f, 9.5f, 10.0f}, // Linha 1
+    {7.0f, 7.5f, 8.5f, 9.0f}   // Linha 2
 };
 ```
 
-- Cada conjunto {} representa uma linha da matriz.
+#### 4. Percorrendo a Matriz com `for` Tradicional
 
-- Caso nenhum valor seja informado, a matriz será preenchida com valores default.
+Para ler ou manipular os dados de uma matriz, precisamos aninhar dois laços de repetição: o primeiro controla as linhas e o segundo controla as colunas.
 
-<hr>
-
-#### Percorrendo a matriz com for tradicional
-
-Para manipular os dados, utilizamos dois laços:
-
-```
-for (int i = 0; i < notas.length; i++) {
-    for (int j = 0; j < notas[i].length; j++) {
-        System.out.println(notas[i][j]);
+```java
+for (int i = 0; i < notas.length; i++) { // Percorre as linhas
+    for (int j = 0; j < notas[i].length; j++) { // Percorre as colunas da linha atual
+        System.out.print(notas[i][j] + " ");
     }
+    System.out.println(); // Quebra de linha ao fim de cada linha da matriz
 }
 ```
 
-- i representa a linha
-- j representa a coluna
+* `i` representa o índice da linha atual.
+* `j` representa o índice da coluna atual.
+* `notas.length` retorna a quantidade total de linhas.
+* `notas[i].length` retorna a quantidade de colunas que aquela linha específica possui.
 
-Assim como no vetor, o for each não permite alterar diretamente os valores, apenas acessá-los
+---
 
-<hr>
+### 🎯 Conclusão
 
-### Link para a aula anterior
+O uso de vetores e matrizes otimiza o código evitando a criação de dezenas de variáveis avulsas (ex: em vez de criar `nota1`, `nota2`, `nota3`, criamos apenas `notas[]`). Compreender o funcionamento dos índices e os limites de tamanho do array é crucial para evitar o famoso erro `ArrayIndexOutOfBoundsException`.
 
-- Retornar para *[Aula 07](../Aula_07/README.md)*.
+---
 
-- Caso queira ver o conteúdo da aula seguinte, basta clicar <b>[aqui](../Aula_09/README.md)</b>.
+### 🧭 Navegação
+
+* ⬅️ **Aula Anterior:** [Aula 07: Laboratório de Fixação — Listas de Exercícios 2 e 3](../Aula_07/README.md)
+* ➡️ **Próxima Aula:** [Aula 09: Laboratório Prático — Lista de Exercícios 04 (Arrays)](../Aula_09/README.md)

@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class ClassMercado {
     public static void main(String[] args) {
-
+        
+        Scanner teclado = new Scanner(System.in);
+        
         // Aqui iremos definir os produtos, sua quantidade dentro do estoque e também o seu preço
         Produtos[] estoque = new Produtos[4];
 
@@ -13,28 +17,66 @@ public class ClassMercado {
         mercado.exibirEstoque();
 
         // Criamos um cliente e também realizamos uma um pedido
+        // Definimos apenas um cliente
         Cliente cliente = new Cliente("João");
 
+        // Pedido número 1
+        // Itens e quantidades
         String[] itensDesejados_1   = {"Arroz", "Feijão"};
         int[]    quantDesejadas_1   = {1, 10};
+
+        // Pedido em si
+        cliente.setPedido(itensDesejados_1, quantDesejadas_1, mercado);
+        cliente.getPedido(cliente.getQuantidadePedidos()-1);
+
+        // Pagamento
+        System.out.print("Escolha a forma de Pagamento: (1) Dinheiro (2) Cheque (3) Cartão: ");
+        cliente.setPagamento(Pagamento(teclado.nextInt()));
+
+        // Pedido número 2
+        // Itens e quantidades
         String[] itensDesejados_2   = {"Macarrão", "Azeite"};
         int[]    quantDesejadas_2   = {100, 10};
-        cliente.setPedido(itensDesejados_1, quantDesejadas_1, mercado);
-        cliente.setPedido(itensDesejados_2, quantDesejadas_2, mercado);
 
+        // Pedido em si
+        cliente.setPedido(itensDesejados_2, quantDesejadas_2, mercado);
+        cliente.getPedido(cliente.getQuantidadePedidos()-1);
+
+        // Pagamento
+        System.out.print("Escolha a forma de Pagamento: (1) Dinheiro (2) Cheque (3) Cartão: ");
+        cliente.setPagamento(Pagamento(teclado.nextInt()));
+
+        teclado.close();
         // Exibe os pedidos
             cliente.exibirTodosPedidos();
             System.out.println("\n--- Estoque após os pedidos ---");
             mercado.exibirEstoque();
     }
+
+    public static String Pagamento(int valor){
+        int opcaoPagamento = valor;
+        switch (opcaoPagamento){
+            case 1:
+                return "Dinheiro";
+            case 2:
+                return "Cheque";
+            case 3:
+                return "Cartão";
+            default:
+                System.out.print("Opção Inválida de pagamento, será no Dinheiro então kkk\n");
+                return "Dinheiro";
+
+        }
+
+    }
 }
 
 // -------------------------------------------------------
 
-class Produtos {
-    private final String item;
+class Produtos { // Essa classe irá iniciar um produto e verificar sua quantidade disponível no estoque, realizar operação de retirada do estoque também, além de poder ver o preço do produto
+    private final String item; // final: ninguém muda o preço após criação
     private int quantidade;
-    private float preco;  // final: ninguém muda o preço após criação
+    private float preco;  
 
     public Produtos(String item, int quantidade, float preco) {
         this.item = item;
@@ -71,7 +113,7 @@ class Produtos {
 
 // -------------------------------------------------------
 
-class Mercado {
+class Mercado { // essa classe irá gerar um Array com os produtos que foram criados
     private Produtos[] estoque;
 
     public Mercado(Produtos[] estoque) {
@@ -99,11 +141,12 @@ class Mercado {
 
 // -------------------------------------------------------
 
-class Pedido {
+class Pedido { // essa classe será por onde o cliente irá realizar a compra, além de informar a forma de pagamento
     private int id;
     private Produtos[] itensDoPedido;
     private int[] quantidadesDoPedido;
     private int totalItens;
+    private String formaPagamento = "?";
 
     public Pedido(int id, String[] itens, int[] quantidades, Mercado mercado) {
         this.id = id;
@@ -111,12 +154,12 @@ class Pedido {
         this.quantidadesDoPedido = new int[itens.length];
         this.totalItens = 0;
 
-        montar(itens, quantidades, mercado);
+        montarPedido(itens, quantidades, mercado);
     }
 
     // Valida cada item contra o estoque do mercado e monta o pedido
-    private void montar(String[] itens, int[] quantidades, Mercado mercado) {
-        int tamanho = Math.min(itens.length, quantidades.length);
+    private void montarPedido(String[] itens, int[] quantidades, Mercado mercado) {
+        int tamanho = Math.min(itens.length, quantidades.length); // sempre irá verificar o tamanho mínimo para ambos os Arrays
 
         for (int i = 0; i < tamanho; i++) {
             Produtos produtoNoEstoque = mercado.buscarProduto(itens[i]);
@@ -145,6 +188,10 @@ class Pedido {
         return totalItens > 0;
     }
 
+    public void setFormaPagamento(String formaPagamento) {
+        this.formaPagamento = formaPagamento;
+    }
+
     public void exibirPedido() {
         System.out.println("\n=== Pedido #" + id + " ===");
         if (!temItens()) {
@@ -162,13 +209,13 @@ class Pedido {
                     subtotal);
             total += subtotal;
         }
-        System.out.printf("  TOTAL: R$%.2f%n", total);
+        System.out.printf("  TOTAL: R$%.2f\n  Forma pagamento: *%s*\n", total, this.formaPagamento);
     }
 }
 
 // -------------------------------------------------------
 
-class Cliente {
+class Cliente { // essa classe irá definir o cliente, sua contagem de pedidos, seus pedidos e o total de pedidos
     private String nome;
     private static int contadorId = 0;
     private Pedido[] pedidos;
@@ -203,14 +250,22 @@ class Cliente {
     }
 
     // Retorna um pedido específico pelo índice
-    public Pedido getPedido(int indice) {
+    public void getPedido(int indice) {
+        //System.out.print(indice);
         if (indice < 0 || indice >= totalPedidos) {
             System.out.println("Pedido #" + indice + " não encontrado.");
-            return null;
         }
-        return pedidos[indice];
+        pedidos[indice].exibirPedido();
     }
 
+    public void setPagamento(String formaPagamento) { // A minha lógica seria do programa alterar a forma de pagamento sempre do último pedido feito. Como na main nós não passamos nenhum indice para esse caso, porém se no futuro fossemos trabalhar com algo mais redondo, seria necessário colocar o indice para ele encontrar esse epedido e realizar a troca.
+        pedidos[contadorId-1].setFormaPagamento(formaPagamento);
+    }
+
+    public int getQuantidadePedidos(){
+        //System.out.print(this.totalPedidos);
+        return this.totalPedidos;
+    }
     // Exibe todos os pedidos do cliente
     public void exibirTodosPedidos() {
         if (totalPedidos == 0) {

@@ -163,4 +163,4 @@ O domínio do tratamento de exceções em Java separa programadores iniciantes d
 ### 🧭 Navegação
 
 * ⬅️ **Aula Anterior:** [Aula 16: Interfaces e Modularidade em Java](../Aula_16/README.md)
-* ➡️ **Próxima Aula:** [Aula 18:]()
+* ➡️ **Próxima Aula:** [Aula 18: Framework de Coleções (Collections Framework)](../Aula_18/README.md)

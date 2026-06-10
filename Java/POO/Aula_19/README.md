@@ -1,17 +1,3 @@
-O seu resumo sobre **Threads** e a interface `Runnable` está excelente, João! Você pegou muito bem o ponto central, que é a existência da thread principal (`main`) e as duas formas clássicas de se criar uma linha de execução paralela no Java.
-
-Para responder à pergunta conceitual que você deixou no final do rascunho ("*Devo aplicar a Herança ou não no contexto de Threads?*") e enriquecer o conteúdo, fiz os seguintes ajustes:
-
-1. **Correção de Sintaxe:** Mudei os blocos de código que estavam marcados como `bash` para `java`, e corrigi a sintaxe da **Forma 2** (que no rascunho criava um `new Thread()` infinito dentro da própria classe).
-2. **Explicação do Dilema (Herança vs. Interface):** Adicionei uma seção comparativa detalhando por que a comunidade Java prefere quase sempre o uso de `implements Runnable` (Forma 1).
-3. **Exemplo Prático Completo:** Criei um código funcional mostrando as duas implementações rodando em paralelo para o seu README ficar bem ilustrado.
-4. **Navegação:** Conectei com a aula anterior de Coleções.
-
-Aqui está o seu README revisado, completo e pronto para o repositório:
-
----
-
-```markdown
 ## 📆 Data: 08/06/2026 | 📚 Professora: Rebeca | 👨🏾‍🏫 Aluno: João Victor Labre
 
 # 🧵 Aula 19: Programação Concorrente com Threads em Java
@@ -132,4 +118,4 @@ O uso de Threads permite criar sistemas muito mais rápidos e responsivos (como 
 
 ### 🧭 Navegação
 
-* ⬅️ **Aula Anterior:** [Aula 19: Framework de Coleções (Collections)](https://www.google.com/search?q=../Aula_19/README.md)
+* ⬅️ **Aula Anterior:** [Aula 18: Framework de Coleções (Collections)](https://www.google.com/search?q=../Aula_18/README.md)

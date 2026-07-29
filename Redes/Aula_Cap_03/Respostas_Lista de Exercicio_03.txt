@@ -1,0 +1,286 @@
+RESPOSTAS LISTA DE EXERCÍCIOS 03
+
+1 - 
+
+a)  A -> S: 400 | 23
+
+b)  B -> S: 500 | 23
+
+c)  S -> A: 23 | 400
+
+d)  S -> A: 23 | 500
+
+e) Sim
+
+f) Não
+
+---
+
+2 - Do servidor para:
+
+A -> PO: 80 | PD: 26145 -> endereço de origem: b e ip destino: a
+
+C -> PO: 80 | PD: 7532 -> endereço de origem: b e ip destino: c
+
+C -> PO: 80 | PD: 26145 -> endereço de origem: b e ip destino: C
+
+---
+
+3 - 
+
+a) 20 bytes
+
+b) ACK = 90
+
+---
+
+4 - Não conseguir entender essa questão. 
+
+
+---
+
+5 - 
+
+Considerando um enlace de 1Gbps:
+ttx = (1500 * 8)/10^9 = 12μs
+
+U = 0,98 = (0,012 * n) / 30,012 ∴ n = 2451 pacotes
+
+---
+
+6 - O TCP aguarda o recebimento de 3 ACKs duplicados antes de realizar a retransmissão rápida para evitar retransmissões desnecessárias causadas apenas pela reordenação de pacotes na rede.
+
+Por exemplo, suponha que os segmentos n, n + 1 e n + 2 sejam enviados. O segmento n é recebido corretamente e seu ACK chega ao remetente. Entretanto, durante o percurso pela rede, os segmentos n + 1 e n + 2 podem chegar fora de ordem, fazendo com que n + 2 seja recebido antes de n + 1.
+
+Quando isso acontece, o receptor envia um ACK duplicado indicando que ainda espera o segmento n + 1. Caso o TCP realizasse a retransmissão já no primeiro ACK duplicado, poderia retransmitir um pacote que, na verdade, apenas sofreu atraso e ainda chegaria corretamente.
+
+Ao esperar por 3 ACKs duplicados, o TCP aumenta a confiança de que realmente houve perda de pacote, e não apenas um atraso ou reordenação temporária. Dessa forma, evita transmissões prematuras, reduzindo tráfego desnecessário na rede e melhorando a eficiência da comunicação.
+
+---
+
+7 -
+
+(a)
+Go-Back-N (GBN)
+O hospedeiro A envia inicialmente os segmentos 1, 2, 3, 4 e 5.
+Como o segmento 2 é perdido, o receptor B continua esperando esse segmento e descarta os segmentos seguintes recebidos fora de ordem.
+Após o tempo de timeout, A retransmite os segmentos 2, 3, 4 e 5.
+
+Assim:
+
+Total de segmentos enviados por A: 9
+(1, 2, 3, 4, 5 + retransmissão de 2, 3, 4 e 5)
+Total de ACKs enviados por B: 8
+4 ACKs indicando o último segmento recebido corretamente até o segmento 1
+Depois, ACKs referentes aos segmentos 2, 3, 4 e 5 após a retransmissão
+Selective Repeat (SR)
+O hospedeiro A envia os segmentos 1, 2, 3, 4 e 5.
+O segmento 2 é perdido.
+Diferentemente do GBN, o receptor B aceita e armazena os segmentos 3, 4 e 5, mesmo recebidos fora de ordem.
+Apenas o segmento 2 precisa ser retransmitido.
+
+Assim:
+
+Total de segmentos enviados por A: 6
+(1, 2, 3, 4, 5 + retransmissão do 2)
+Total de ACKs enviados por B: 5
+ACKs para os segmentos 1, 3, 4 e 5
+Posteriormente, ACK para o segmento 2 retransmitido
+TCP
+O TCP envia os segmentos 1, 2, 3, 4 e 5.
+O segmento 2 é perdido.
+O receptor recebe os segmentos seguintes fora de ordem e envia ACKs duplicados indicando que ainda espera o segmento 2.
+Após receber ACKs duplicados suficientes, o TCP realiza a retransmissão rápida do segmento 2, sem esperar timeout.
+
+Assim:
+
+Total de segmentos enviados por A: 6
+(1, 2, 3, 4, 5 + retransmissão do 2)
+Total de ACKs enviados por B: 5
+4 ACKs com número de confirmação 2 (indicando que espera o segmento 2)
+Depois, 1 ACK com número 6, indicando que todos os segmentos até o 5 foram recebidos corretamente
+
+O TCP utiliza ACK cumulativo, ou seja, o ACK sempre informa o próximo segmento esperado.
+
+(b)
+
+O protocolo que entrega os cinco segmentos corretamente no menor intervalo de tempo é o TCP.
+
+Isso ocorre porque o TCP utiliza o mecanismo de retransmissão rápida (Fast Retransmit). Ao receber múltiplos ACKs duplicados, ele identifica rapidamente a perda do segmento e o retransmite sem precisar aguardar o timeout.
+
+Já o GBN e o SR dependem do esgotamento do temporizador para iniciar a retransmissão, tornando o processo mais lento quando o timeout é muito alto.
+
+---
+
+8 - Sim, pois a taxa de envio sempre será o comprimento da janela de congestionamento pelo RTT.
+
+---
+
+9 - Falso ou Verdadeiro.
+a. O hospedeiro A está enviando ao hospedeiro B um arquivo grande por uma conexão TCP. Suponha que o hospedeiro B não tenha dados para enviar para o hospedeiro A. O hospedeiro B não enviará reconhecimentos para A porque ele não pode dar carona aos reconhecimentos dos dados -> *Falso*
+b. O tamanho de rwnd do TCP nunca muda enquanto dura a conexão -> *Falso*
+c. Suponha que o hospedeiro A esteja enviando ao hospedeiro B um arquivo grande por uma conexão TCP. O número de bytes não reconhecidos que o hospedeiro A envia não pode exceder o tamanho do buffer de recepção -> *Verdadeiro*
+d. Imagine que o hospedeiro A esteja enviando ao hospedeiro B um arquivo grande por uma conexão TCP. Se o número de sequência para um segmento dessa conexão for m, então o número de sequência para o segmento subsequente será necessariamente m+1 -> *Falso*
+e. O segmento TCP tem um campo em seu cabeçalho para rwnd -> *Verdadeiro*
+f. Imagine que o hospedeiro A envie ao hospedeiro B, por uma conexão TCP, um segmento com o número de sequência 38 e 4 bytes de dados. Nesse mesmo segmento, o número de reconhecimento será necessariamente 42 -> *Falso*
+
+---
+
+10 - 
+
+### a) Em quais intervalos a partida lenta (Slow Start) está em execução?
+
+A fase de **partida lenta** ocorre nos intervalos:
+
+* **[1 ; 6]**
+* **[23 ; 26]**
+
+Isso ocorre porque, nesses trechos, a janela de congestionamento cresce exponencialmente, característica típica do Slow Start.
+
+---
+
+### b) Em quais intervalos a prevenção de congestionamento está em execução?
+
+A fase de **prevenção de congestionamento** ocorre nos intervalos:
+
+* **[6 ; 16]**
+* **[17 ; 22]**
+
+Nesses períodos, o crescimento da janela de congestionamento passa a ser linear, indicando que o TCP saiu da partida lenta e entrou no modo de controle de congestionamento.
+
+---
+
+### c) Após a 16ª rodada, a perda foi detectada por 3 ACKs duplicados ou timeout?
+
+A perda foi detectada por **3 ACKs duplicados**.
+
+No TCP Reno, quando isso acontece, a janela de congestionamento não retorna para 1 MSS. Em vez disso, ela é reduzida aproximadamente pela metade, caracterizando o mecanismo de retransmissão rápida.
+
+---
+
+### d) Após a 22ª rodada, a perda foi detectada por 3 ACKs duplicados ou timeout?
+
+A perda foi detectada por **esgotamento de temporização (timeout)**.
+
+Quando ocorre timeout, o TCP Reno entende que o congestionamento é mais severo e redefine a janela de congestionamento para:
+
+cwnd = 1\ MSS
+
+---
+
+### e) Qual é o valor inicial de ssthresh?
+
+O valor inicial de **ssthresh** é:
+
+ssthresh = 32\ MSS
+
+Isso pode ser observado no momento em que o TCP deixa a fase de partida lenta e passa para a prevenção de congestionamento.
+
+---
+
+### f) Qual é o valor de ssthresh na 18ª rodada?
+
+Na 16ª rodada ocorreu perda de pacote, e a janela de congestionamento estava em:
+
+cwnd = 42\ MSS
+
+O TCP Reno ajusta o limiar para metade desse valor:
+
+ssthresh = \frac{42}{2} = 21\ MSS
+
+Portanto, na 18ª rodada:
+
+* **ssthresh = 21 MSS**
+
+---
+
+### g) Qual é o valor de ssthresh na 24ª rodada?
+
+Na 22ª rodada, ocorreu timeout quando:
+
+cwnd = 29\ MSS
+
+Assim, o novo limiar torna-se:
+
+ssthresh = \left\lfloor \frac{29}{2} \right\rfloor = 14\ MSS
+
+Portanto:
+
+* **ssthresh = 14 MSS**
+
+---
+
+### h) Em qual rodada foi enviado o 70º segmento?
+
+A quantidade de segmentos enviados por rodada é:
+
+* 1ª rodada → segmento 1
+* 2ª rodada → segmentos 2–3
+* 3ª rodada → segmentos 4–7
+* 4ª rodada → segmentos 8–15
+* 5ª rodada → segmentos 16–31
+* 6ª rodada → segmentos 32–63
+* 7ª rodada → segmentos 64–96
+
+Logo, o **70º segmento** foi enviado na:
+
+* **7ª rodada**
+
+---
+
+### i) Se houver perda após a 26ª rodada detectada por 3 ACKs duplicados, quais serão os novos valores de cwnd e ssthresh?
+
+Quando a perda é detectada por ACKs duplicados:
+
+* o novo limiar é metade da janela atual;
+* a janela de congestionamento passa a ser:
+
+cwnd = ssthresh + 3
+
+Assim:
+
+* **ssthresh = 4 MSS**
+* **cwnd = 7 MSS**
+
+---
+
+### j) Se fosse utilizado TCP Tahoe e houvesse 3 ACKs duplicados na 16ª rodada, quais seriam os valores na 19ª rodada?
+
+No TCP Tahoe, ao detectar perda por ACKs duplicados:
+
+* a janela retorna imediatamente para 1 MSS;
+* o limiar torna-se metade da janela anterior.
+
+Assim:
+
+ssthresh = 21\ MSS
+
+e
+
+cwnd = 1\ MSS
+
+Portanto, na 19ª rodada:
+
+* **ssthresh = 21 MSS**
+* **cwnd = 1 MSS**
+
+---
+
+### k) Se TCP Tahoe fosse utilizado e houvesse timeout na 22ª rodada, quantos pacotes foram enviados entre as rodadas 17 e 22?
+
+Após o timeout, o TCP Tahoe reinicia em Slow Start:
+
+* 17ª rodada → 1 pacote
+* 18ª rodada → 2 pacotes
+* 19ª rodada → 4 pacotes
+* 20ª rodada → 8 pacotes
+* 21ª rodada → 16 pacotes
+* 22ª rodada → 21 pacotes
+
+Total:
+
+1 + 2 + 4 + 8 + 16 + 21 = 52
+
+Logo:
+
+* **Foram enviados 52 pacotes no total.**

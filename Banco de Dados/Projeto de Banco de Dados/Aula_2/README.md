@@ -77,6 +77,6 @@ Níveis de abstração do projeto de banco de dados e seus focos fundamentais:
 
 ---
 
-**🏠 [README PRINCIPAL**](../README.md)
+**🏠 [README PRINCIPAL](../README.md)**
 
 Organizado por: [João Victor Labre](https://github.com/LabreCoder) | [LinkedIn](https://www.linkedin.com/in/joão-victor-labre)

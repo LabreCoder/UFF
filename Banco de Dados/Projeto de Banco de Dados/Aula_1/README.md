@@ -40,6 +40,6 @@ A aula inicial apresenta as diretrizes e o planejamento para a disciplina **TCC0
 
 ---
 
-**🏠 [README PRINCIPAL**](../README.md)
+**🏠 [README PRINCIPAL](../README.md)**
 
 Organizado por: [João Victor Labre](https://github.com/LabreCoder) | [LinkedIn](https://www.linkedin.com/in/joão-victor-labre)

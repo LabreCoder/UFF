@@ -12,7 +12,11 @@ A aula inicial apresenta as diretrizes e o planejamento para a disciplina **TCC0
 
 ### 💡 Conceitos Chave
 
-* **Estrutura Programática:** O conteúdo da disciplina é dividido em quatro blocos temáticos: **Índices e Estruturas de Dados** (SGBD row-store, índices primários e secundários), **Índices na Prática**, **Otimização de Consultas** (parsing, catálogo, seletividade e plano de execução) e **Gerenciamento de Transações** (views, stored procedures, PL/SQL e concorrência).
+* **Estrutura Programática:** O conteúdo da disciplina é dividido em quatro blocos temáticos:
+* **-> Índices e Estruturas de Dados:** SGBD row-store, índices primários e secundários.
+* **-> Índices na Prática:** Aplicação e análise de estruturas de indexação.
+* **-> Otimização de Consultas:** Parsing, catálogo, seletividade e plano de execução.
+* **-> Gerenciamento de Transações:** Views, stored procedures, PL/SQL e concorrência.
 
 ---
 
@@ -32,10 +36,10 @@ A aula inicial apresenta as diretrizes e o planejamento para a disciplina **TCC0
 ### 🧭 Navegação
 
 * ⬅️ **Aula Anterior:** *Primeira aula do curso*
-* ➡️ **Próxima Aula:** [Aula 2: Revisão](../Aula_2/README.md)
+* ➡️ **Próxima Aula:** [Aula 2: Revisão de Arquitetura Física e Armazenamento](../Aula_2/README.md)
 
 ---
 
-**🏠 [README PRINCIPAL](../README.md)**
+**🏠 [README PRINCIPAL**](../README.md)
 
 Organizado por: [João Victor Labre](https://github.com/LabreCoder) | [LinkedIn](https://www.linkedin.com/in/joão-victor-labre)

@@ -26,7 +26,7 @@ A disciplina aborda os conceitos essenciais e avançados para a concepção, des
 
 | Aula / Lab | Título & Tópicos Abordados | Formato | Link |
 | --- | --- | --- | --- |
-| **Aula 01** | Introdução aos Sistemas Distribuídos (Autonomia, Transparência, Middleware, Abertura, Escalabilidade) | Teórica | [Acessar](https://www.google.com/search?q=./Aula_1/README.md) |
+| **Aula 01** | Introdução aos Sistemas Distribuídos (Autonomia, Transparência, Middleware, Abertura, Escalabilidade) | Teórica | [Acessar](./Aula_1/README.md) |
 <!--| **Aula 02** | [Título da Aula 02] | [Preencher] | [Acessar](./Aula_2/README.md) |
 | **Aula 03** | [Título da Aula 03] | [Preencher] | [Acessar](./Aula_3/README.md) |
 | **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |

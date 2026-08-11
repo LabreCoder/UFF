@@ -1,134 +1,86 @@
-🏫 Universidade Federal Fluminense (UFF) — Sistemas de Informação
+# 🏫 Sistemas Distribuídos — UFF
 
-## 📆 Data: DD/MM/AAAA | 📚 Professora: Nome | 👨🏾‍🏫 Aluno: João Victor Labre
-
-# ☕ Aula XX: [Título da Aula]
-
-### 📝 Introdução
-
-[Breve resumo sobre o tema principal da aula, objetivos e visão geral do que foi abordado.]
+Repositório dedicado aos materiais, anotações, laboratórios e exercícios práticos desenvolvidos na disciplina de **TCC00362 — Sistemas Distribuídos para Sistemas de Informação** do curso de **Sistemas de Informação** da **Universidade Federal Fluminense (UFF)**.
 
 ---
 
-### 💡 Conceitos Chave
-
-* **[Conceito 1]:** [Explicação breve do conceito.]
-* **[Conceito 2]:** [Explicação breve do conceito.]
-
-#### 🔍 [Tópico em Destaque / Comparativo]
-
-[Subseção para aprofundar um conceito importante ou fazer comparativos de conceitos.]
-
----
-
-### 💻 Exemplos de Código
-
-```java
-// Exemplo demonstrativo do conceito aprendido
-public class ExemploTeorico {
-    public static void main(String[] args) {
-        System.out.println("Exemplo de código da aula teórica");
-    }
-}
-```
-
----
-
-### ⚠️ Pontos de Atenção & Dicas *(Opcional)*
-
-> 💡 **Dica:** [Insira uma boa prática, pegadinha de sintaxe ou detalhe importante citado pelo professor.]
-
----
-
-### 📚 Links & Leituras Complementares *(Opcional)*
-
-* 🔗 [Nome do Artigo/Documentação](https://www.google.com/search?q=https://link-aqui.com)
-* 📖 Capítulo X do livro [Nome do Livro]
-
----
-
-### 🧭 Navegação
-
-* ⬅️ **Aula Anterior:** [Aula XX: Título da Aula](https://www.google.com/search?q=../Aula_XX/README.md)
-* ➡️ **Próxima Aula:** [Aula XX: Título da Aula](https://www.google.com/search?q=../Aula_XX/README.md)
-
----
-
-**[🏠 README PRINCIPAL](https://www.google.com/search?q=../README.md)**
-
-Organizado por: [João Victor Labre](https://github.com/LabreCoder) | [LinkedIn](https://www.linkedin.com/in/joão-victor-labre)
-
----
-
-## 🛠️ Modelo 2: Aula Prática / Exercícios
-
-## 🏫 Universidade Federal Fluminense (UFF) — Sistemas de Informação
-
-## 📆 Data: DD/MM/AAAA | 📚 Professora: Nome | 👨🏾‍🏫 Aluno: João Victor Labre
-
-# 💻 Laboratório XX: [Título do Laboratório / Tema da Prática]
-
-### 🎯 Objetivos da Prática
-
-* [Objetivo 1, ex: Implementar herança e polimorfismo]
-* [Objetivo 2, ex: Manipular exceções em Java]
-
----
-
-### 📌 Exercícios & Desafios
-
-#### 🔷 Exercício 01: [Nome ou Tema do Exercício]
-
-> **Enunciado:**
-> [Cole aqui a descrição do problema passado em aula ou lista de exercícios.]
-
-* 📂 **Solução:** [`Exercicio01.java`](./src/Exercicio01.java)
-
-<details>
-<summary>🔍 <b>Ver Saída Esperada / Output no Terminal</b></summary>
+## 📌 Módulos do Curso
 
 ```text
-Entrada: 5
-Processando dados...
-Resultado: Sucesso!
+Sistemas_Distribuidos/
+├── ⚙️ Módulo 1: Conceitos Fundamentais, Nuvem e Arquiteturas (Aulas 01 a XX)
+├── 🧩 Módulo 2: Internet das Coisas (IoT) e Comunicação (Aulas XX a XX)
+└── 🚀 Módulo 3: Replicação, Consistência e Tolerância a Falhas (Aulas XX a XX)
 
 ```
 
 ---
 
-#### 🔷 Exercício 02: [Nome ou Tema do Exercício]
+## 📌 Visão Geral do Conteúdo
 
-> **Enunciado:**
-> [Cole aqui a descrição do problema.]
-
-* 📂 **Solução:** [`Exercicio02.java`](https://www.google.com/search?q=./src/Exercicio02.java)
+A disciplina aborda os conceitos essenciais e avançados para a concepção, desenvolvimento e gerenciamento de sistemas distribuídos. O conteúdo capacita no entendimento de computação em nuvem, arquiteturas distribuídas, Internet das Coisas (IoT), e no tratamento de desafios complexos do ambiente de rede, como gerenciamento de réplicas, consistência de dados, concorrência, transparência e tolerância a falhas.
 
 ---
 
-### 🚀 Como Executar o Código
+## 🗺️ Sumário do Conteúdo
 
-Você pode abrir e executar o projeto diretamente na sua IDE de preferência (**VS Code** ou **IntelliJ IDEA**), ou via terminal:
+| Aula / Lab | Título & Tópicos Abordados | Formato | Link |
+| --- | --- | --- | --- |
+| **Aula 01** | Introdução aos Sistemas Distribuídos (Autonomia, Transparência, Middleware, Abertura, Escalabilidade) | Teórica | [Acessar](https://www.google.com/search?q=./Aula_1/README.md) |
+<!--| **Aula 02** | [Título da Aula 02] | [Preencher] | [Acessar](./Aula_2/README.md) |
+| **Aula 03** | [Título da Aula 03] | [Preencher] | [Acessar](./Aula_3/README.md) |
+| **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |
+| **Aula 05** | [Título da Aula 05] | [Preencher] | [Acessar](./Aula_5/README.md) |
+| **Aula 06** | [Título da Aula 06] | [Preencher] | [Acessar](./Aula_6/README.md) |
+| **Aula 07** | [Título da Aula 07] | [Preencher] | [Acessar](./Aula_7/README.md) |
+| **Aula 08** | [Título da Aula 08] | [Preencher] | [Acessar](./Aula_8/README.md) |
+| **Aula 09** | [Título da Aula 09] | [Preencher] | [Acessar](./Aula_9/README.md) |
+| **Aula 10** | [Título da Aula 10] | [Preencher] | [Acessar](./Aula_10/README.md) |
+| **Aula 11** | [Título da Aula 11] | [Preencher] | [Acessar](./Aula_11/README.md) |
+-->
+
+---
+
+## 🛠️ Tecnologias & Ferramentas Utilizadas
+
+* **Linguagem / Tecnologia:** [A definir conforme o progresso do curso, ex: Java, Python, Go, gRPC, Sockets]
+* **IDE / Ambiente:** VS Code
+* **Sistemas / Ferramentas:** Git, GitHub, Docker, Ambientes de Nuvem / Simuladores
+
+---
+
+## 💻 Como Executar os Códigos / Projetos
+
+Para clonar e testar os arquivos e projetos diretamente via terminal:
 
 ```bash
-# Compilar o arquivo
-javac src/Exercicio01.java
+# Navegar até a pasta da aula desejada (Exemplo: Aula_01)
+cd Aula_01
 
-# Executar a classe
-java -cp src Exercicio01
+# Executar scripts ou aplicações (Ajustar conforme a tecnologia utilizada na aula)
 
 ```
 
-> ⚙️ **Requisitos do Ambiente:** Java JDK 17+ instalado.
+<!-->> ⚙️ **Requisitos do Ambiente:** [Especificar conforme os requisitos das práticas]-->
 
 ---
 
-### 🧭 Navegação
+## 👨🏾‍🏫 Autor & Informações Acadêmicas
 
-* ⬅️ **Aula Anterior:** [Aula XX: Título da Aula](https://www.google.com/search?q=../Aula_XX/README.md)
-* ➡️ **Próxima Aula:** [Aula XX: Título da Aula](https://www.google.com/search?q=../Aula_XX/README.md)
+Organizado por **João Victor Labre**
 
----
+Graduando em Sistemas de Informação — Universidade Federal Fluminense (UFF)
 
-**[🏠 README PRINCIPAL](https://www.google.com/search?q=../README.md)**
+## 📧 Contact
 
-Organizado por: [João Victor Labre](https://github.com/LabreCoder) | [LinkedIn](https://www.linkedin.com/in/joão-victor-labre)
+<div align="center">
+    <a href="https://github.com/LabreCoder">
+        <img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+    </a>     
+    <a href="https://www.linkedin.com/in/joão-victor-labre">
+        <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=LinkedIn&logoColor=white"/>
+    </a>     
+    <a href="mailto:jvlabremachado@gmail.com">
+        <img alt="Email" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=Gmail&logoColor=white"/>
+    </a>
+</div>

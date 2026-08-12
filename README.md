@@ -94,7 +94,7 @@ UFF/
 * 📁 **`Modelagem de Processos de Negocios/`** ➔ Conceitos e práticas de BPM ----> [**[Acessar ↗️]**](<./Modelagem de Processos de Negocios>)
 * 📁 **`Monitoria/`** ➔ Lógica, dicionários e matrizes em Python para auxílio a alunos ----> [**[Acessar ↗️]**](./Monitoria)
 * 📁 **`PI/`** ➔ Direitos autorais e propriedade intelectual em jogos ----> [**[Acessar ↗️]**](./PI)
-* 📁 **`Projetos/`** ➔ Projetos de pesquisa e fomento (FAPERJ, Cyber Lab) ----> [**[Acessar ↗️]**](./Projetos)
+<!--* 📁 **`Projetos/`** ➔ Projetos de pesquisa e fomento (FAPERJ, Cyber Lab) ---- [**[Acessar ↗️]**](./Projetos)-->
 * 📁 **`Python/`** ➔ Lab. de Resolução de Problemas, Prog I e Estatística ----> [**[Acessar ↗️]**](./Python)
 * 📁 **`Redes/`** ➔ Camadas TCP/IP, Sockets e Labs (Wireshark, DNS, HTTP) ----> [**[Acessar ↗️]**](./Redes)
 * 📁 **`Sistemas Distribuidos/`** ➔ Conceitos, aulas e relatórios ----> [**[Acessar ↗️]**](<./Sistemas Distribuidos>)

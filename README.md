@@ -86,17 +86,17 @@ UFF/
 ### 📂 Navegação Direta pelas Pastas
 
 * 📁 **`Banco de Dados/`** ➔ Princípios de BD, Projeto de BD e Neo4j ----> [**[Acessar ↗️]**](<./Banco de Dados>)
-* 📁 **`C/`** ➔ Estrutura de Dados I, Prog II e Sistemas Operacionais em C ----> [**[Acessar ↗️]**](./C)
-* 📁 **`Ética/`** ➔ Atividades, leituras e resoluções unificadas ----> [**[Acessar ↗️]**](./Ética)
-* 📁 **`Inteligência_de_negócios/`** ➔ Slides, estudos de caso e trabalhos de BI ----> [**[Acessar ↗️]**](./Inteligencia_de_negocios)
-* 📁 **`Introducao a Interacao Humano-Computador/`** ➔ Aulas e conceitos de IHC  ----> [**[Acessar ↗️]**](<./Interacao Humano-Computador>)
+* 📁 **`C/`** ➔ Estrutura de Dados I, Prog II e Sistemas Operacionais em C ----> [**[Acessar ↗️]**](./C) [[![Status](<https://img.shields.io/badge/status-em%20conserto-orange?style=flat-square>)](#)]
+* 📁 **`Ética/`** ➔ Atividades, leituras e resoluções unificadas ----> [**[Acessar ↗️]**](./Ética) [[![Status](https://img.shields.io/badge/Status-Futuro-blue?style=flat-square&logo=hourglass-empty&logoColor=white)](#)]
+* 📁 **`Inteligência_de_negócios/`** ➔ Slides, estudos de caso e trabalhos de BI ----> [**[Acessar ↗️]**](./Inteligencia_de_negocios) [[![Status](https://img.shields.io/badge/Status-Futuro-blue?style=flat-square&logo=hourglass-empty&logoColor=white)](#)]
+* 📁 **`Interacao Humano-Computador/`** ➔ Aulas e conceitos de IHC  ----> [**[Acessar ↗️]**](<./Interacao Humano-Computador>)
 * 📁 **`Java/`** ➔ POO (Aulas/Exercícios) e Engenharia de Software ----> [**[Acessar ↗️]**](./Java)
 * 📁 **`Modelagem de Processos de Negocios/`** ➔ Conceitos e práticas de BPM ----> [**[Acessar ↗️]**](<./Modelagem de Processos de Negocios>)
-* 📁 **`Monitoria/`** ➔ Lógica, dicionários e matrizes em Python para auxílio a alunos ----> [**[Acessar ↗️]**](./Monitoria)
-* 📁 **`PI/`** ➔ Direitos autorais e propriedade intelectual em jogos ----> [**[Acessar ↗️]**](./PI)
-<!--* 📁 **`Projetos/`** ➔ Projetos de pesquisa e fomento (FAPERJ, Cyber Lab) ---- [**[Acessar ↗️]**](./Projetos)-->
-* 📁 **`Python/`** ➔ Lab. de Resolução de Problemas, Prog I e Estatística ----> [**[Acessar ↗️]**](./Python)
-* 📁 **`Redes/`** ➔ Camadas TCP/IP, Sockets e Labs (Wireshark, DNS, HTTP) ----> [**[Acessar ↗️]**](./Redes)
+* 📁 **`Monitoria/`** ➔ Lógica, dicionários e matrizes em Python para auxílio a alunos ----> [**[Acessar ↗️]**](./Monitoria) [[![Status](https://img.shields.io/badge/Status-Futuro-blue?style=flat-square&logo=hourglass-empty&logoColor=white)](#)]
+* 📁 **`PI/`** ➔ Direitos autorais e propriedade intelectual em jogos ----> [**[Acessar ↗️]**](./PI) [[![Status](https://img.shields.io/badge/Status-Futuro-blue?style=flat-square&logo=hourglass-empty&logoColor=white)](#)]
+* 📁 **`Projetos/`** ➔ Projetos de pesquisa e fomento (Cyber Lab) ----> [**[Acessar ↗️]**](./Projetos) [[![Status](https://img.shields.io/badge/Status-Futuro-blue?style=flat-square&logo=hourglass-empty&logoColor=white)](#)]
+* 📁 **`Python/`** ➔ Lab. de Resolução de Problemas, Prog I e Estatística ----> [**[Acessar ↗️]**](./Python) [[![Status](<https://img.shields.io/badge/status-em%20conserto-orange?style=flat-square>)](#)]
+* 📁 **`Redes/`** ➔ Camadas TCP/IP, Sockets e Labs (Wireshark, DNS, HTTP) ----> [**[Acessar ↗️]**](./Redes) [[![Status](<https://img.shields.io/badge/status-em%20conserto-orange?style=flat-square>)](#)]
 * 📁 **`Sistemas Distribuidos/`** ➔ Conceitos, aulas e relatórios ----> [**[Acessar ↗️]**](<./Sistemas Distribuidos>)
 
 ---

@@ -66,6 +66,7 @@ UFF/
 
 ---
 
+```text
 UFF/
 ├── 🗄️ Banco de Dados/
 ├── 💻 C/
@@ -80,6 +81,7 @@ UFF/
 ├── 🐍 Python/
 ├── 🌐 Redes/
 └── ⚙️ Sistemas Distribuidos/
+```
 
 ### 📂 Navegação Direta pelas Pastas
 

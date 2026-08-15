@@ -64,7 +64,7 @@ A **aula inicial** estabeleceu as diretrizes pedagógicas e os objetivos da disc
 ### 🧭 Navegação
 
 * ⬅️ **Aula Anterior:** *Primeira aula do curso*
-* ➡️ **Próxima Aula:** [Aula 2:](../Aula_2/README.md)
+* ➡️ **Próxima Aula:** [Aula 2: Processos de Design de IHC & Qualidade da Interação](../Aula_2/README.md)
 
 ---
 

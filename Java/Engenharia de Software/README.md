@@ -27,8 +27,8 @@ A disciplina aborda os fundamentos teóricos e práticos para a construção de 
 | Aula / Lab | Título & Tópicos Abordados | Formato | Link |
 | --- | --- | --- | --- |
 | **Aula 01** | Introdução à Engenharia de Software & Apresentação | Teórica | [Acessar](./Aula_01/README.md) |
-<!--| **Aula 02** | [Título da Aula 02] | [Preencher] | [Acessar](./Aula_02/README.md) |
-| **Aula XX** | [Título da Aula XX] | [Preencher] | [Acessar](./Aula_XX/README.md) |
+| **Aula 02** | Modelos de Ciclo de Vida — Métodos Tradicionais | Teórica | [Acessar](./Aula_02/README.md) |
+<!--| **Aula XX** | [Título da Aula XX] | [Preencher] | [Acessar](./Aula_XX/README.md) |
 | **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |
 | **Aula 05** | [Título da Aula 05] | [Preencher] | [Acessar](./Aula_5/README.md) |
 | **Aula 06** | [Título da Aula 06] | [Preencher] | [Acessar](./Aula_6/README.md) |

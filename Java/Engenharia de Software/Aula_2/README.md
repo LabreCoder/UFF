@@ -1,6 +1,6 @@
 # 🏫 Universidade Federal Fluminense (UFF) — Sistemas de Informação
 
-## 📆 Data: 17/08/2026 | 📚 Professora: Rebeca Motta | 👨🏾‍🏫 Aluno: João Victor Labre
+## 📆 Data: 12/08/2026 | 📚 Professora: Rebeca Motta | 👨🏾‍🏫 Aluno: João Victor Labre
 
 # ☕ Aula 02: Modelos de Ciclo de Vida — Métodos Tradicionais
 
@@ -15,21 +15,12 @@ Em seguida, a aula aprofundou-se no estudo do ciclo de vida do software — o ca
 ### 💡 Conceitos Chave
 
 * **Ciclo de Vida de Software (Representação Abstrata):** Descreve as etapas lógicas pelas quais um produto de software passa ao longo de sua existência. Serve para estruturar o processo, habilitar o controle de qualidade, facilitar a comunicação entre os interessados e mitigar riscos de mudança. Suas fases genéricas baseiam-se em: Planejamento, Requisitos, Projeto, Implementação, Testes, Entrega/Implantação e Operação/Manutenção.
-
-
-
 * **Modelos Sequenciais (Cascata e V):**
 * *Modelo Cascata (Clássico):* Proposto por Winston Royce em 1970. Funciona de maneira estritamente linear, onde uma fase só começa após o término e documentação detalhada da anterior. É ideal para projetos muito pequenos e de requisitos estáticos (como o projeto do Boeing 777). No entanto, sua rigidez dificulta acomodar mudanças tardias, gerando gargalos.
 * *Modelo em V:* Foca na relação direta entre as fases de especificação (lado esquerdo) e as fases equivalentes de teste (lado direito), dividindo o fluxo entre **Verificação** (o produto está sendo feito corretamente?) e **Validação** (o produto correto está sendo feito?). É amplamente utilizado em indústrias altamente regulamentadas, como a de dispositivos médicos (FDA/UE).
-
-
-
 * **Modelos Incrementais (Iterativo Incremental e RAD):**
 * *Iterativo Incremental:* Divide o desenvolvimento em módulos funcionais (incrementos operacionais) entregues de forma faseada ao cliente. O usuário recebe partes úteis mais cedo e fornece feedback contínuo. É o modelo adotado pela Netflix para testar e refinar novos conteúdos com base em dados de usuários.
 * *RAD (Rapid Application Development):* Modelo incremental focado em ciclos de desenvolvimento extremamente curtos (tipicamente até 90 dias). Baseia-se no paralelismo massivo de equipes separadas construindo módulos altamente independentes. Exige alto custo de recursos humanos e forte acoplamento modular (conforme ilustrado no famoso MVP inicial do Dropbox).
-
-
-
 * **Modelos Evolutivos (Evolucionário, Espiral e Prototipagem):**
 * *Evolucionário:* Desenvolve gradativamente a especificação junto com o cliente. Porém, modificações constantes tendem a corromper a estrutura lógica do software e degradar a documentação.
 * *Modelo Espiral:* Proposto por Barry Boehm em 1988, é o modelo clássico **orientado a riscos**. Cada iteração é dividida em quatro quadrantes: definição de objetivos, avaliação e redução de riscos, desenvolvimento/validação e planejamento da próxima fase. É ideal para sistemas grandes, complexos e críticos (como o Advanced Traffic Management System - ATMS).
@@ -47,7 +38,7 @@ Em seguida, a aula aprofundou-se no estudo do ciclo de vida do software — o ca
 ### ⚠️ Pontos de Atenção & Dicas
 
 > 💡 **Curiosidade Histórica (Royce e a Cascata):** No artigo seminal de 1970 sobre gerenciamento de grandes sistemas de software, Winston Royce **nunca utilizou o termo "Cascata"**. Além disso, ele descreveu o fluxo linear estrito para apontá-lo como "arriscado e um convite ao fracasso", propondo, na verdade, uma abordagem mais interativa com ciclos de feedback entre as etapas.
->
+> ---
 > 📌 **O Perigo da Prototipagem Rápida:** Ao final do ciclo de prototipagem, o cliente frequentemente adquire a falsa impressão de que o software final está praticamente pronto. O desenvolvedor deve ser cauteloso para não ceder à pressão de reaproveitar códigos "remendados" do protótipo na solução definitiva, mantendo o compromisso com os critérios formais de qualidade.
 
 ---
@@ -62,7 +53,7 @@ Em seguida, a aula aprofundou-se no estudo do ciclo de vida do software — o ca
 
 ### 🧭 Navegação
 
-* ⬅️ **Aula Anterior:** [Aula 1: Introdução à Engenharia de Software &amp; Apresentação](../Aula_1/README.md)
+* ⬅️ **Aula Anterior:** [Aula 1: Introdução à Engenharia de Software](../Aula_1/README.md)
 * ➡️ **Próxima Aula:** [Aula 3:](../Aula_3/README.md)
 
 ---

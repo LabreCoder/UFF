@@ -36,6 +36,7 @@ A aula inicial apresenta as diretrizes e o planejamento para a disciplina **TCC0
 --
 
 > 💡 **Classificação dos Sistemas Distribuídos:** Os SDs são tradicionalmente classificados em três grandes categorias:
+>
 > 1. **Alto Desempenho (High-Performance):** Voltados para processamento paralelo e computação paramétrica ou científica de alta demanda computacional (como previsões de tempo ou processamento de redes neurais).
 > 2. **Sistemas de Informação Distribuídos:** Essencialmente transacionais (ACID), lidando com alto volume de transações simultâneas (como e-commerce e operações financeiras).
 > 3. **Sistemas Distribuídos Pervasivos:** Sistemas móveis, embutidos e altamente cooperativos baseados em Internet das Coisas (IoT), caracterizados por restrições severas de bateria, memória e banda (como Waze e monitoramento médico).
@@ -52,7 +53,7 @@ A aula inicial apresenta as diretrizes e o planejamento para a disciplina **TCC0
 ### 🧭 Navegação
 
 * ⬅️ **Aula Anterior:** *Primeira aula do curso*
-* ➡️ **Próxima Aula:** [Aula 2: Arquiteturas e Modelos de Sistemas Distribuídos](../Aula_2/README.md)
+* ➡️ **Próxima Aula:** [Aula 2: Grids e Clusters — Em busca de maior capacidade de processamento](../Aula_2/README.md)
 
 ---
 

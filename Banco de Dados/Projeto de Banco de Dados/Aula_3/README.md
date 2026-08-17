@@ -32,18 +32,26 @@ A aula abordou o conceito de **indexação de dados**, com foco em como essas es
 > 💡 **Comparação de Custo Físico de Acesso (I/O) para Consulta Exata (`WHERE código = 7`):**
 > Considerando uma tabela distribuída fisicamente em 4 páginas de dados em disco (PD1 a PD4):
 >
+> ---
+>
 > * **Sem Índice:** O SGBD faz um table scan completo, gerando **4 acessos ao disco**.
 > * **Índice Primário Denso:** Permite ir direto ao ponteiro correto e carregar apenas a página de dados exata, gerando **1 acesso ao disco**.
 > * **Índice Primário Esparso:** Requer buscar o bloco delimitador e depois carregar a página associada, gerando **2 acessos ao disco**.
 > * **Índice Secundário:** Busca a entrada densa correspondente no índice e acessa o registro por meio do ponteiro em um único salto, gerando **1 acesso ao disco**.
-
+>
+> ---
+>
 > 💡 **Desempenho em Varreduras de Intervalo (`WHERE código >= 7`):**
 > O comportamento das consultas de intervalo varia significativamente conforme o tipo de índice:
+>
+> ---
 >
 > * **Índice Primário Denso:** Pelo fato de os dados físicos estarem ordenados de forma sequencial na tabela em disco, consome apenas **2 acessos ao disco**.
 > * **Índice Primário Esparso:** Exige a busca e leitura de múltiplos limites físicos de páginas, consumindo **3 acessos ao disco**.
 > * **Índice Secundário:** Como os registros físicos não estão dispostos em disco ordenadamente pela chave secundária, o SGBD precisa saltar entre diferentes blocos para recuperar os dados, consumindo **3 acessos ao disco** para esta mesma consulta.
-
+>
+> ---
+>
 > 💡 **Custo Oculto da Indexação Excessiva:** Embora os índices acelerem consideravelmente os tempos de leitura e busca (I/O), eles trazem um custo real de processamento físico. Sempre que um registro sofre alteração (`INSERT`, `UPDATE`, `DELETE`), o SGBD precisa atualizar todas as estruturas dos índices associados no disco de maneira síncrona.
 
 ---
@@ -58,7 +66,7 @@ A aula abordou o conceito de **indexação de dados**, com foco em como essas es
 ### 🧭 Navegação
 
 * ⬅️ **Aula Anterior:** [Aula 2: Revisão de Arquitetura Física e Armazenamento](../Aula_2/README.md)
-* ➡️ **Próxima Aula:** [Aula 4: Árvores B e B+ (B-Trees)](../Aula_4/README.md)
+* ➡️ **Próxima Aula:** [Aula 4: Índice Hash (Hashing Estático e Linear)](../Aula_4/README.md)
 
 ---
 

@@ -29,9 +29,8 @@ A disciplina aborda os conceitos avançados e práticos necessários para o proj
 | **Aula 01** | Apresentação da Disciplina e Introdução ao Curso | Teórica | [Acessar](./Aula_1/README.md) |
 | **Aula 02** | Revisão de Arquitetura Física e Armazenamento      | Teórica | [Acessar](./Aula_2/README.md) |
 | **Aula 03** | Índices e Estruturas de Índices                    | Teórica | [Acessar](./Aula_3/README.md) |
-
-<!--| **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |
-| **Aula 05** | [Título da Aula 05] | [Preencher] | [Acessar](./Aula_5/README.md) |
+| **Aula 04** | Índice Hash (Hashing Estático e Linear) | Teórica | [Acessar](./Aula_4/README.md) |
+<!--| **Aula 05** | [Título da Aula 05] | [Preencher] | [Acessar](./Aula_5/README.md) |
 | **Aula 06** | [Título da Aula 06] | [Preencher] | [Acessar](./Aula_6/README.md) |
 | **Aula 07** | [Título da Aula 07] | [Preencher] | [Acessar](./Aula_7/README.md) |
 | **Aula 08** | [Título da Aula 08] | [Preencher] | [Acessar](./Aula_8/README.md) |

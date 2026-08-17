@@ -3,16 +3,19 @@
 # 📚 Aula 18: Framework de Coleções (Collections Framework)
 
 ### 📝 Introdução
+
 A décima nona aula teve como objetivo apresentar o ecossistema de **Collections** do Java. Compreendemos a transição do uso de Estruturas de Dados Primitivas (como variáveis simples de tipos primitivos e Arrays de tamanho fixo) para Estruturas de Dados Não-Primitivas Lineares e Não-Lineares de tamanho dinâmico.
 
 ---
 
 ### 🏗️ O que são as Coleções (Collections)?
-O *Collections Framework* é um conjunto de interfaces e classes utilitárias que servem para armazenar e manipular coleções de objetos na memória de forma totalmente **dinâmica** (o tamanho da estrutura cresce ou diminui automaticamente). 
+
+O *Collections Framework* é um conjunto de interfaces e classes utilitárias que servem para armazenar e manipular coleções de objetos na memória de forma totalmente **dinâmica** (o tamanho da estrutura cresce ou diminui automaticamente).
 
 No topo dessa hierarquia temos a **Interface `Collection`**, da qual derivam as estruturas que utilizamos no dia a dia:
 
 #### 1. List (Listas)
+
 Representa uma sequência ordenada de elementos que **permite duplicatas**. Os elementos podem ser acessados diretamente por sua posição de índice (assim como nos vetores).
 
 * **`ArrayList`:** A implementação mais comum. Baseada em um array dinâmico interno, ideal para cenários onde a leitura de dados é muito frequente.
@@ -24,7 +27,7 @@ import java.util.ArrayList;
 public class ExemploList {
     public static void main(String[] args) {
         List<String> listaNomes = new ArrayList<>();
-        
+      
         listaNomes.add("João");
         listaNomes.add("Victor");
         listaNomes.add("João"); // Permite duplicata tranquilamente
@@ -49,7 +52,7 @@ import java.util.HashSet;
 public class ExemploSet {
     public static void main(String[] args) {
         Set<String> palavras = new HashSet<>();
-        
+      
         palavras.add("Java");
         palavras.add("POO");
         palavras.add("Java"); // Esta duplicata será ignorada automaticamente
@@ -75,10 +78,10 @@ public class ExemploMap {
     public static void main(String[] args) {
         // Estrutura: Map<Tipo_Da_Chave, Tipo_Do_Valor>
         Map<String, String> dddPorMunicipio = new HashMap<>();
-        
+      
         dddPorMunicipio.put("21", "São Gonçalo / Rio de Janeiro");
         dddPorMunicipio.put("11", "São Paulo");
-        
+      
         // Buscando o valor através da chave
         System.out.println("Localidade do DDD 21: " + dddPorMunicipio.get("21"));
     }
@@ -98,12 +101,9 @@ O `Iterator` é um objeto utilitário projetado especificamente para navegar de 
 * **`Iterator` Tradicional:** Realiza a navegação unidirecional (apenas do início para o fim).
 * `hasNext()`: Verifica se ainda existe um próximo elemento na coleção.
 * `next()`: Retorna o próximo elemento de fato.
-
-
 * **`ListIterator`:** Uma variação mais robusta exclusiva para listas, que permite a navegação bidirecional.
 * `hasPrevious()`: Verifica se existe um elemento anterior (permitindo navegar do fim até o começo).
 * `previous()`: Retorna o elemento anterior.
-
 
 ```java
 import java.util.ArrayList;
@@ -113,10 +113,10 @@ import java.util.List;
 public class ExemploIterator {
     public static void main(String[] args) {
         List<Integer> numeros = new ArrayList<>(List.of(10, 20, 30));
-        
+      
         // Criando o objeto Iterator para a lista
         Iterator<Integer> it = numeros.iterator();
-        
+      
         // Percorrendo de forma segura do início ao fim
         while (it.hasNext()) {
             System.out.println("Elemento via Iterator: " + it.next());
@@ -135,5 +135,5 @@ O uso do *Collections Framework* elimina a necessidade de criarmos estruturas de
 
 ### 🧭 Navegação
 
-* ⬅️ **Aula Anterior:** [Aula 17: Tratamento de Exceções](https://www.google.com/search?q=../Aula_17/README.md)
+* ⬅️ **Aula Anterior:** [Aula 17: Tratamento de Exceções](../Aula_17/README.md)
 * ➡️ **Próxima Aula:** [Aula 19: Programação Concorrente com Threads em Java](../Aula_19/README.md)

@@ -118,4 +118,4 @@ O uso de Threads permite criar sistemas muito mais rápidos e responsivos (como 
 
 ### 🧭 Navegação
 
-* ⬅️ **Aula Anterior:** [Aula 18: Framework de Coleções (Collections)](https://www.google.com/search?q=../Aula_18/README.md)
+* ⬅️ **Aula Anterior:** [Aula 18: Framework de Coleções (Collections)](../Aula_18/README.md)

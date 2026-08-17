@@ -27,8 +27,8 @@ A disciplina aborda os conceitos essenciais e avançados para a concepção, des
 | Aula / Lab | Título & Tópicos Abordados | Formato | Link |
 | --- | --- | --- | --- |
 | **Aula 01** | Introdução aos Sistemas Distribuídos (Autonomia, Transparência, Middleware, Abertura, Escalabilidade) | Teórica | [Acessar](./Aula_1/README.md) |
-<!--| **Aula 02** | [Título da Aula 02] | [Preencher] | [Acessar](./Aula_2/README.md) |
-| **Aula 03** | [Título da Aula 03] | [Preencher] | [Acessar](./Aula_3/README.md) |
+| **Aula 02** | Grids e Clusters — Em busca de maior capacidade de processamento | Teórica | [Acessar](./Aula_2/README.md) |
+<!--| **Aula 03** | [Título da Aula 03] | [Preencher] | [Acessar](./Aula_3/README.md) |
 | **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |
 | **Aula 05** | [Título da Aula 05] | [Preencher] | [Acessar](./Aula_5/README.md) |
 | **Aula 06** | [Título da Aula 06] | [Preencher] | [Acessar](./Aula_6/README.md) |

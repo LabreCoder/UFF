@@ -44,16 +44,15 @@ A segunda aula apresenta os conceitos fundamentais de **computação em grade (g
 ### ⚠️ Pontos de Atenção & Dicas
 
 > 💡 **Limites de Processamento Sequencial:** O aumento contínuo de desempenho de processadores sequenciais encontrou um limite físico intransponível. Por isso, o ganho de desempenho em sistemas modernos depende essencialmente do paralelismo, usando técnicas como múltiplos processadores simétricos (SMP), GPUs e clusters computacionais.
-
+> ---
 > 💡 **Tolerância a Falhas em Clusters (Failover e Failback):** Em sistemas de alta disponibilidade, o comutador detecta automaticamente a queda de um nó. A recuperação é feita através do **failover** (migração de processos e dados para outro nó operacional). Assim que o nó original é reparado, realiza-se o **failback** (retorno das atividades ao hardware de origem).
-
+> ---
 > 💡 **Gargalo do Ponto de Entrada Único:** Embora um ponto de entrada centralizado (comutador) ofereça transparência de acesso, ele representa um ponto único de falha (*Single Point of Failure*). Soluções para contornar isso incluem a definição de múltiplos pontos de acesso utilizando distribuição de requisições baseada em servidores DNS (ex.: DNS *round-robin*) ou mecanismos de mobilidade para IPv6.
-
+> ---
 > 💡 **Supercomputadores de Referência:** A aula destaca alguns exemplos reais de grande relevância:
 > * **OSCAR (IC-UFF):** O cluster local do IC-UFF, composto de 42 máquinas (40 de cálculo, 1 de compilação/login e 1 de manutenção), totalizando 240 núcleos de processamento Intel Xeon e 14,5 TB de capacidade.
 > * **Santos Dumont (LNCC):** Instalado no Laboratório Nacional de Computação Científica, é conhecido como o computador mais rápido da América Latina, possuindo 756 nós computacionais e 18.144 núcleos.
 > * **Frontier (OLCF/EUA):** Desenvolvido pela HP, opera na escala de *Exaflops* (1.102 exaFLOPS), sendo composto por 9.472 CPUs AMD Epyc e 37.888 GPUs Radeon Instinct distribuídos em 74 racks.
-> 
 > 
 
 ---

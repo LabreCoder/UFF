@@ -28,8 +28,8 @@ A disciplina aborda os princípios teóricos e práticos para o projeto, impleme
 | ----------------- | -------------------------------------------------- | -------- | ---------------------------- |
 | **Aula 01** | Apresentação da Disciplina & Introdução à IHC | Teórica | [Acessar](./Aula_1/README.md) |
 | **Aula 02** | Processos de Design de IHC & Qualidade da Interação | Teórica | [Acessar](./Aula_2/README.md) |
-<!--| **Aula 03** | [Título da Aula 03] | [Preencher] | [Acessar](./Aula_3/README.md) |
-| **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |
+| **Aula 03** | Métodos de Investigação & Análise da Situação Atual | Teórica | [Acessar](./Aula_3/README.md) |
+<!--| **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |
 | **Aula 05** | [Título da Aula 05] | [Preencher] | [Acessar](./Aula_5/README.md) |
 | **Aula 06** | [Título da Aula 06] | [Preencher] | [Acessar](./Aula_6/README.md) |
 | **Aula 07** | [Título da Aula 07] | [Preencher] | [Acessar](./Aula_7/README.md) |

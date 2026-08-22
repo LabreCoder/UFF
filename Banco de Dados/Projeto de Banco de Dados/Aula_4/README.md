@@ -62,7 +62,7 @@ Esta aula abordou o conceito de **Índice Hash**, detalhando o funcionamento de 
 ### 🧭 Navegação
 
 * ⬅️ **Aula Anterior:** [Aula 3: Índices e Estruturas de Índices](../Aula_3/README.md)
-* ➡️ **Próxima Aula:** [Aula 5: ](../Aula_5/README.md)
+* ➡️ **Próxima Aula:** [Aula 5: Estruturas de Índices Baseadas em Árvores (Árvores B e B+)](../Aula_5/README.md)
 
 ---
 

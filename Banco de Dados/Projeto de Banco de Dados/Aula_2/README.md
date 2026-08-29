@@ -75,6 +75,7 @@ Níveis de abstração do projeto de banco de dados e seus focos fundamentais:
 * ⬅️ **Aula Anterior:** [Aula 1: Apresentação da Disciplina e Introdução ao Curso](../Aula_1/README.md)
 * ➡️ **Próxima Aula:** [Aula 3: Índices e Estruturas de Índices](../Aula_3/README.md)
 
+* 📚️ **Exercício:** [Exercício utilizando o Docker](./EXERCICIO.md)
 ---
 
 **🏠 [README PRINCIPAL](../README.md)**

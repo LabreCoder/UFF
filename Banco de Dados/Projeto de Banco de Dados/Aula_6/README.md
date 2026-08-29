@@ -71,7 +71,7 @@ Esta aula abordou os aspectos práticos da **implementação e gerenciamento de 
 ### 🧭 Navegação
 
 * ⬅️ **Aula Anterior:** [Aula 05: Estruturas de Índices Baseadas em Árvores (Árvores B e B+)](../Aula_5/README.md)
-* ➡️ **Próxima Aula:** [Aula 07: ](../Aula_7/README.md)
+* ➡️ **Próxima Aula:** [Aula 07: Fragmentação Horizontal (Teoria, FHP, FHD e Corretude)](../Aula_7/README.md)
 
 ---
 

@@ -32,9 +32,9 @@ A disciplina aborda os conceitos avançados e práticos necessários para o proj
 | **Aula 04** | Índice Hash (Hashing Estático e Linear) | Teórica | [Acessar](./Aula_4/README.md) |
 | **Aula 05** | Estruturas de Índices Baseadas em Árvores (Árvores B e B+) | Teórica | [Acessar](./Aula_5/README.md) |
 | **Aula 06** | Índices no PostgreSQL | Teórica | [Acessar](./Aula_6/README.md) |
-<!--| **Aula 07** | [Título da Aula 07] | [Preencher] | [Acessar](./Aula_7/README.md) |
-| **Aula 08** | [Título da Aula 08] | [Preencher] | [Acessar](./Aula_8/README.md) |
-| **Aula 09** | [Título da Aula 09] | [Preencher] | [Acessar](./Aula_9/README.md) |
+| **Aula 07** | Fragmentação Horizontal (Teoria, FHP, FHD e Corretude) | Teórica | [Acessar](./Aula_7/README.md) |
+| **Aula 08** | Particionamento e Fragmentação Horizontal Avançada | Teórica | [Acessar](./Aula_8/README.md) |
+<!--| **Aula 09** | [Título da Aula 09] | [Preencher] | [Acessar](./Aula_9/README.md) |
 | **Aula 10** | [Título da Aula 10] | [Preencher] | [Acessar](./Aula_10/README.md) |
 | **Aula 11** | [Título da Aula 11] | [Preencher] | [Acessar](./Aula_11/README.md) |
 -->

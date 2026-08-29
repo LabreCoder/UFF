@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------------------
+# Ambiente padrão da disciplina TCC00335 - Projeto de Bancos de Dados
+# Usado por TODOS os exercícios das Aulas 2 a 6 e 8.
+# A Aula 7 (Fragmentação Horizontal) usa um compose complementar
+# (docker-compose.aula7.yml) que simula múltiplos nós distribuídos.
+# ---------------------------------------------------------------------------
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: pbd_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: aluno
+      POSTGRES_PASSWORD: pbd2026
+      POSTGRES_DB: projeto_bd
+    ports:
+      - "5432:5432"
+    volumes:
+      - pbd_data:/var/lib/postgresql/data
+      # Scripts colocados aqui rodam automaticamente SOMENTE na primeira
+      # inicialização do volume. Para reexecutar um script de uma aula
+      # específica, use o comando manual indicado no README de cada aula.
+      - ./scripts-init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aluno -d projeto_bd"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pbd_pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: aluno@uff.br
+      PGADMIN_DEFAULT_PASSWORD: pbd2026
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "8080:80"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  pbd_data:

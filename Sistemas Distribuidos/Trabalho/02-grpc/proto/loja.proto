@@ -1,0 +1,71 @@
+// ============================================================================
+// loja.proto  —  a IDL (Interface Definition Language) do nosso serviço.
+//
+// Este ÚNICO arquivo é o "contrato" entre cliente e servidor. A partir dele o
+// compilador `protoc` GERA os stubs (código de cliente e de servidor) para a
+// linguagem que quisermos (Python, Node.js, Java, Go, C#...). É exatamente o
+// que a Aula 6 descreve: "uma interface definida por IDL é compilada para
+// gerar um stub de cliente e um stub de servidor".
+// ============================================================================
+syntax = "proto3";
+
+package loja;
+
+// Um SERVICE agrupa as chamadas remotas (RPCs). Cada `rpc` mostra um dos
+// QUATRO tipos de comunicação do gRPC — a palavra `stream` é o que muda:
+service Catalogo {
+
+  // 1) UNÁRIA            : 1 requisição  -> 1 resposta   (como uma função comum)
+  rpc ObterProduto (ProdutoRequest) returns (Produto);
+
+  // 2) SERVER STREAMING  : 1 requisição  -> N respostas  (servidor "vai enviando")
+  rpc ListarProdutos (FiltroRequest) returns (stream Produto);
+
+  // 3) CLIENT STREAMING  : N requisições -> 1 resposta   (cliente "vai enviando")
+  rpc FecharCarrinho (stream ItemCarrinho) returns (ResumoCompra);
+
+  // 4) BIDIRECIONAL      : N requisições <-> N respostas (os dois lados ao mesmo tempo)
+  rpc Conversar (stream Mensagem) returns (stream Mensagem);
+
+  // Chamada lenta, usada para demonstrar DEADLINE (prazo) e CANCELAMENTO.
+  rpc GerarRelatorio (RelatorioRequest) returns (Relatorio);
+}
+
+// MENSAGENS: os números (= 1, = 2...) são as "tags" dos campos no formato
+// binário. Eles — e não os nomes — é que viajam na rede, por isso o Protobuf
+// é compacto e permite evoluir o contrato sem quebrar clientes antigos.
+message Produto {
+  int32  id        = 1;
+  string nome      = 2;
+  double preco     = 3;
+  string categoria = 4;
+  int32  estoque   = 5;
+}
+
+message ProdutoRequest { int32 id = 1; }
+
+message FiltroRequest {
+  string categoria = 1;   // vazio = todas
+  int32  atraso_ms = 2;   // pausa entre itens, só para VISUALIZAR o streaming
+}
+
+message ItemCarrinho {
+  int32 produto_id = 1;
+  int32 quantidade = 2;
+}
+
+message ResumoCompra {
+  int32 itens = 1;
+  int32 unidades = 2;
+  double total = 3;
+  repeated string avisos = 4;   // `repeated` = lista
+}
+
+message Mensagem {
+  string autor = 1;
+  string texto = 2;
+  int64  timestamp = 3;
+}
+
+message RelatorioRequest { int32 duracao_ms = 1; }
+message Relatorio { string conteudo = 1; }

@@ -1,0 +1,54 @@
+# Apache Kafka — Loja Online (1 broker em modo KRaft, SEM Zookeeper)
+#   docker compose up -d --build --wait kafka     sobe o broker
+#   ./demo.sh                                     demonstração narrável
+#   docker compose down -v                        desliga e apaga os dados
+services:
+  kafka:
+    image: apache/kafka:3.8.0
+    hostname: kafka
+    ports:
+      - "8104:9094"          # acesso de FORA do Docker (listener EXTERNAL)
+    environment:
+      # KRaft: este mesmo processo é BROKER (guarda/serve o log) e CONTROLLER (metadados do cluster)
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      # Listeners: onde o broker ESCUTA  x  endereço que ele ANUNCIA aos clientes
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:9094
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:8104
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      # 1 único broker => fator de replicação 1 nos tópicos internos
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0      # grupos de consumidores formam rápido (demo)
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"       # tópicos só existem se CRIADOS de propósito
+    volumes:
+      - kafka-data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 15s
+      retries: 30
+      start_period: 10s
+
+  cliente-python:
+    build: { context: ., dockerfile: Dockerfile.python }
+    image: loja-kafka-python
+    profiles: ["clientes"]
+    environment: { KAFKA_BOOTSTRAP: "kafka:9092" }
+    depends_on:
+      kafka: { condition: service_healthy }
+
+  cliente-node:
+    build: { context: ., dockerfile: Dockerfile.node }
+    image: loja-kafka-node
+    profiles: ["clientes"]
+    environment: { KAFKA_BOOTSTRAP: "kafka:9092" }
+    depends_on:
+      kafka: { condition: service_healthy }
+
+volumes:
+  kafka-data:

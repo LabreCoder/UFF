@@ -1,0 +1,12 @@
+FROM python:3.12-slim
+WORKDIR /app
+RUN pip install --no-cache-dir grpcio==1.68.1 grpcio-tools==1.68.1
+
+# A IDL é copiada e COMPILADA aqui: protoc gera loja_pb2.py (mensagens) e
+# loja_pb2_grpc.py (stub de cliente + base do servidor). É o passo "gerar stubs".
+COPY proto/loja.proto .
+RUN python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. loja.proto
+
+COPY servidor/server.py .
+COPY clientes/python/cliente.py .
+CMD ["python", "-u", "server.py"]

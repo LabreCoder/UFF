@@ -1,0 +1,41 @@
+# RabbitMQ — Loja Online
+#   docker compose up -d --build rabbitmq     sobe o broker
+#   ./demo.sh                                 demonstração narrável (blocos A, B, C, D, E)
+#   Painel de gerenciamento: http://localhost:8103   (usuário: loja / senha: loja123)
+#   docker compose down -v                    desliga e APAGA os dados (volume)
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    hostname: rabbitmq              # o nome do nó fica gravado no volume; precisa ser estável
+    environment:
+      RABBITMQ_DEFAULT_USER: loja
+      RABBITMQ_DEFAULT_PASS: loja123
+    ports:
+      - "8103:15672"                # painel web (management)
+      - "8113:5672"                 # protocolo AMQP (para clientes fora do Docker)
+    volumes:
+      - rabbit-data:/var/lib/rabbitmq   # onde ficam filas duráveis e mensagens persistentes
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 3s
+      timeout: 10s
+      retries: 30
+
+  cliente-python:
+    build: { context: ., dockerfile: Dockerfile.python }
+    image: loja-rabbit-python
+    profiles: ["clientes"]
+    environment: { RABBIT_HOST: rabbitmq }
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+
+  cliente-node:
+    build: { context: ., dockerfile: Dockerfile.node }
+    image: loja-rabbit-node
+    profiles: ["clientes"]
+    environment: { RABBIT_URL: "amqp://loja:loja123@rabbitmq" }
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+
+volumes:
+  rabbit-data:

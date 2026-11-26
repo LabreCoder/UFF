@@ -1,0 +1,39 @@
+# gRPC — Loja Online
+#   docker compose up -d --build                         sobe o servidor (porta 8102 no host)
+#   ./demo.sh                                            demonstração narrável
+#   docker compose run --rm cliente-python               tour completo em Python
+#   docker compose run --rm cliente-node                 tour completo em Node.js
+#   docker compose logs servidor                         o que o servidor registrou
+#   docker compose down                                  desliga
+x-python: &python
+  build: { context: ., dockerfile: Dockerfile.python }
+  image: loja-grpc-python
+
+services:
+  servidor:
+    <<: *python
+    command: ["python", "-u", "server.py"]
+    ports:
+      - "8102:50051"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; socket.create_connection(('localhost', 50051), 2)"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  cliente-python:
+    <<: *python
+    profiles: ["clientes"]
+    environment: { ALVO: "servidor:50051" }
+    command: ["python", "-u", "cliente.py", "todos"]
+    depends_on:
+      servidor: { condition: service_healthy }
+
+  cliente-node:
+    build: { context: ., dockerfile: Dockerfile.node }
+    image: loja-grpc-node
+    profiles: ["clientes"]
+    environment: { ALVO: "servidor:50051" }
+    command: ["node", "cliente.mjs", "todos"]
+    depends_on:
+      servidor: { condition: service_healthy }

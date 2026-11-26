@@ -1,0 +1,8 @@
+FROM node:20-alpine
+WORKDIR /app
+COPY clientes/node/package.json .
+RUN npm install --omit=dev
+# O Node carrega a MESMA IDL (.proto) e monta o stub em tempo de execução.
+COPY proto/loja.proto ./proto/loja.proto
+COPY clientes/node/cliente.mjs .
+CMD ["node", "cliente.mjs", "todos"]

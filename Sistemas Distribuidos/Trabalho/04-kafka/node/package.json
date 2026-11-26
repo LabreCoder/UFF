@@ -1,0 +1,9 @@
+{
+  "name": "cliente-kafka-node",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "kafkajs": "2.2.4"
+  }
+}

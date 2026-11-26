@@ -1,0 +1,45 @@
+# REST — Loja Online
+#   docker compose up -d --build          sobe API + gateway
+#   ./demo.sh                             demonstração narrável (curl)
+#   docker compose run --rm cliente-node  cliente em JavaScript (Node.js)
+#   docker compose run --rm cliente-python cliente em Python
+#   docker compose down                   desliga
+services:
+  api:
+    build: ./api
+    environment:
+      API_TOKEN: segredo-da-loja
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://localhost:8000/')"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+
+  gateway:
+    image: nginx:1.27-alpine
+    ports:
+      - "8101:80"        # ÚNICA porta exposta ao mundo (a API fica escondida)
+    volumes:
+      - ./gateway/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      api:
+        condition: service_healthy
+
+  # Clientes em OUTRAS linguagens consumindo a MESMA API (interoperabilidade).
+  cliente-node:
+    image: node:20-alpine
+    profiles: ["clientes"]
+    working_dir: /app
+    volumes: ["./clientes/node:/app:ro"]
+    environment: { API_URL: "http://gateway" }
+    command: ["node", "cliente.mjs"]
+    depends_on: [gateway]
+
+  cliente-python:
+    image: python:3.12-slim
+    profiles: ["clientes"]
+    working_dir: /app
+    volumes: ["./clientes/python:/app:ro"]
+    environment: { API_URL: "http://gateway" }
+    command: ["python", "cliente.py"]
+    depends_on: [gateway]

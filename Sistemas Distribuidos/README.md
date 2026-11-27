@@ -28,13 +28,13 @@ A disciplina aborda os conceitos essenciais e avançados para a concepção, des
 | --- | --- | --- | --- |
 | **Aula 01** | Introdução aos Sistemas Distribuídos (Autonomia, Transparência, Middleware, Abertura, Escalabilidade) | Teórica | [Acessar](./Aula_1/README.md) |
 | **Aula 02** | Grids e Clusters — Em busca de maior capacidade de processamento | Teórica | [Acessar](./Aula_2/README.md) |
-<!--| **Aula 03** | [Título da Aula 03] | [Preencher] | [Acessar](./Aula_3/README.md) |
-| **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |
-| **Aula 05** | [Título da Aula 05] | [Preencher] | [Acessar](./Aula_5/README.md) |
-| **Aula 06** | [Título da Aula 06] | [Preencher] | [Acessar](./Aula_6/README.md) |
-| **Aula 07** | [Título da Aula 07] | [Preencher] | [Acessar](./Aula_7/README.md) |
-| **Aula 08** | [Título da Aula 08] | [Preencher] | [Acessar](./Aula_8/README.md) |
-| **Aula 09** | [Título da Aula 09] | [Preencher] | [Acessar](./Aula_9/README.md) |
+| **Aula 03** | Virtualização e Computação em Nuvem | Teórica | [Acessar](./Aula_3/README.md) |
+| **Aula 04** | Internet das Coisas (IoT) | Teórica | [Acessar](./Aula_4/README.md) |
+| **Aula 05** | Arquiteturas de Sistemas Distribuídos (Cliente-Servidor, Camadas, Eventos, P2P, DHT/Chord) | Teórica | [Acessar](./Aula_5/README.md) |
+| **Aula 06** | Comunicação entre Processos (RPC, Mensagens, Filas/MOM, AMQP, RabbitMQ) | Teórica | [Acessar](./Aula_6/README.md) |
+| **Aula 07** | Replicação e Consistência (Modelos de Consistência, Relógios Vetoriais, Quóruns) | Teórica | [Acessar](./Aula_7/README.md) |
+| **Aula 08** | Tolerância a Falhas (Confiabilidade, Disponibilidade, MTTF/MTTR, Recuperação) | Teórica | [Acessar](./Aula_8/README.md) |
+<!--| **Aula 09** | [Título da Aula 09] | [Preencher] | [Acessar](./Aula_9/README.md) |
 | **Aula 10** | [Título da Aula 10] | [Preencher] | [Acessar](./Aula_10/README.md) |
 | **Aula 11** | [Título da Aula 11] | [Preencher] | [Acessar](./Aula_11/README.md) |
 -->

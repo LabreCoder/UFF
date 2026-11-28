@@ -29,15 +29,13 @@ A disciplina aborda os princípios teóricos e práticos para o projeto, impleme
 | **Aula 01** | Apresentação da Disciplina & Introdução à IHC | Teórica | [Acessar](./Aula_1/README.md) |
 | **Aula 02** | Processos de Design de IHC & Qualidade da Interação | Teórica | [Acessar](./Aula_2/README.md) |
 | **Aula 03** | Métodos de Investigação & Análise da Situação Atual | Teórica | [Acessar](./Aula_3/README.md) |
-<!--| **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |
-| **Aula 05** | [Título da Aula 05] | [Preencher] | [Acessar](./Aula_5/README.md) |
-| **Aula 06** | [Título da Aula 06] | [Preencher] | [Acessar](./Aula_6/README.md) |
-| **Aula 07** | [Título da Aula 07] | [Preencher] | [Acessar](./Aula_7/README.md) |
-| **Aula 08** | [Título da Aula 08] | [Preencher] | [Acessar](./Aula_8/README.md) |
-| **Aula 09** | [Título da Aula 09] | [Preencher] | [Acessar](./Aula_9/README.md) |
-| **Aula 10** | [Título da Aula 10] | [Preencher] | [Acessar](./Aula_10/README.md) |
-| **Aula 11** | [Título da Aula 11] | [Preencher] | [Acessar](./Aula_11/README.md) |
--->
+| **Aula 04** | Análise da Situação Atual & Psicologia Experimental e Cognitiva Aplicada | Teórica | [Acessar](./Aula_4/README.md) |
+| **Aula 05** | Teorias de IHC: Engenharia Semiótica & Engenharia Cognitiva | Teórica | [Acessar](./Aula_5/README.md) |
+| **Aula 06** | Personas, Cenários & Análise de Tarefas | Teórica | [Acessar](./Aula_6/README.md) |
+| **Aula 07** | Princípios de Design & Introdução à Avaliação de IHC | Teórica | [Acessar](./Aula_7/README.md) |
+| **Aula 08** | Avaliação Heurística & Percurso Cognitivo | Teórica | [Acessar](./Aula_8/README.md) |
+| **Aula 09** | Teste de Usabilidade & First Click | Teórica | [Acessar](./Aula_9/README.md) |
+| **Aula 10** | Avaliação de Comunicabilidade & Prototipação em Papel | Teórica | [Acessar](./Aula_10/README.md) |
 
 ---
 

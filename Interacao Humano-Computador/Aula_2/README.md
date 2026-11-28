@@ -1,6 +1,6 @@
 # 🏫 Universidade Federal Fluminense (UFF) — Sistemas de Informação
 
-## 📆 Data: 13/08/2026 | 📚 Professora: Daniela Gorski | 👨🏾‍🏫 Aluno: João Victor Labre
+## 📆 Data: 13/08/2026 | 📚 Professora: Daniela Gorski Trevisan | 👨🏾‍🏫 Aluno: João Victor Labre
 
 # ☕ Aula 02: Processos de Design de IHC & Qualidade da Interação
 

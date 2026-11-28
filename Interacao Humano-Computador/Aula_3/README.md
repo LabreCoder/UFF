@@ -1,6 +1,6 @@
 # 🏫 Universidade Federal Fluminense (UFF) — Sistemas de Informação
 
-## 📆 Data: 20/08/2026 | 📚 Professora: Daniela Gorski | 👨🏾🏫 Aluno: João Victor Labre
+## 📆 Data: 20/08/2026 | 📚 Professora: Daniela Gorski Trevisan | 👨🏾‍🏫 Aluno: João Victor Labre
 
 # ☕ Aula 03: Métodos de Investigação & Análise da Situação Atual
 
@@ -67,7 +67,7 @@ A **terceira aula** da disciplina de IHC focou na **Análise da Situação Atual
 ### 🧭 Navegação
 
 * ⬅️ **Aula Anterior:** [Aula 2: Processos de Design de IHC & Qualidade da Interação](../Aula_2/README.md)
-* ➡️ **Próxima Aula:** [Aula 4:](../Aula_4/README.md)
+* ➡️ **Próxima Aula:** [Aula 04: Análise da Situação Atual & Psicologia Experimental e Cognitiva Aplicada](../Aula_4/README.md)
 
 ---
 

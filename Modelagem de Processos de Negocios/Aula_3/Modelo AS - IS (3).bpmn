@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<semantic:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:semantic="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_1275940932088" targetNamespace="http://www.trisotech.com/definitions/_1275940932088">
+  <semantic:collaboration id="Collaboration_UVS">
+    <semantic:participant id="Participant_UVS" name="Universidade Vale do Sol - Aproveitamento de Estudos" processRef="Process_UVS" />
+    <semantic:textAnnotation id="TextAnnotation_Portal">
+      <semantic:text>Canais Informais e Portal</semantic:text>
+    </semantic:textAnnotation>
+    <semantic:textAnnotation id="TextAnnotation_Planilha">
+      <semantic:text>Controlo via Planilha Paralela</semantic:text>
+    </semantic:textAnnotation>
+    <semantic:association id="Assoc_1" associationDirection="None" sourceRef="Activity_Receber" targetRef="TextAnnotation_Portal" />
+    <semantic:association id="Assoc_2" associationDirection="None" sourceRef="Activity_Comparar" targetRef="TextAnnotation_Planilha" />
+  </semantic:collaboration>
+  <semantic:process id="Process_UVS">
+    <semantic:laneSet id="LaneSet_UVS">
+      <semantic:lane id="Lane_Atendimento" name="Central de Atendimento">
+        <semantic:flowNodeRef>Event_Start</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_Receber</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_Verificar</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_Conferir</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Gateway_Completa</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Event_EndDevolvido</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_Devolver</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_Encaminhar</semantic:flowNodeRef>
+        <semantic:childLaneSet id="LaneSet_Atendimento_Child">
+          <semantic:lane id="Lane_Atendimento_Sub">
+            <semantic:flowNodeRef>Event_Start</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_Receber</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_Verificar</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_Conferir</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Gateway_Completa</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Event_EndDevolvido</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_Devolver</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_Encaminhar</semantic:flowNodeRef>
+          </semantic:lane>
+        </semantic:childLaneSet>
+      </semantic:lane>
+      <semantic:lane id="Lane_Coordenacao" name="Coordenação de Curso">
+        <semantic:flowNodeRef>Activity_Comparar</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_Decisao</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Gateway_Parecer</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Gateway_Parcial</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_IndicarComp</semantic:flowNodeRef>
+        <semantic:childLaneSet id="LaneSet_Coordenacao_Child">
+          <semantic:lane id="Lane_Coordenacao_Sub">
+            <semantic:flowNodeRef>Activity_Comparar</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_Decisao</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Gateway_Parecer</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Gateway_Parcial</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_IndicarComp</semantic:flowNodeRef>
+          </semantic:lane>
+        </semantic:childLaneSet>
+      </semantic:lane>
+      <semantic:lane id="Lane_Professor" name="Professor da Área">
+        <semantic:flowNodeRef>Activity_Parecer</semantic:flowNodeRef>
+        <semantic:childLaneSet id="LaneSet_Professor_Child">
+          <semantic:lane id="Lane_Professor_Sub">
+            <semantic:flowNodeRef>Activity_Parecer</semantic:flowNodeRef>
+          </semantic:lane>
+        </semantic:childLaneSet>
+      </semantic:lane>
+      <semantic:lane id="Lane_Secretaria" name="Secretaria Acadêmica">
+        <semantic:flowNodeRef>Activity_RetornoIncerto</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_Registar</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_Comunicar</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Event_EndSucesso</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Activity_ReceberSec</semantic:flowNodeRef>
+        <semantic:flowNodeRef>Gateway_DadosCompletos</semantic:flowNodeRef>
+        <semantic:childLaneSet id="LaneSet_Secretaria_Child">
+          <semantic:lane id="Lane_Secretaria_Sub">
+            <semantic:flowNodeRef>Activity_RetornoIncerto</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_Registar</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_Comunicar</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Event_EndSucesso</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Activity_ReceberSec</semantic:flowNodeRef>
+            <semantic:flowNodeRef>Gateway_DadosCompletos</semantic:flowNodeRef>
+          </semantic:lane>
+        </semantic:childLaneSet>
+      </semantic:lane>
+    </semantic:laneSet>
+    <semantic:startEvent id="Event_Start" name="Necessidade Recebida">
+      <semantic:outgoing>Flow_1</semantic:outgoing>
+    </semantic:startEvent>
+    <semantic:task id="Activity_Receber" name="Receber e Orientar / Criar Protocolo">
+      <semantic:incoming>Flow_1</semantic:incoming>
+      <semantic:outgoing>Flow_2</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Activity_Verificar" name="Verificar Canais / Controlar Pendências">
+      <semantic:incoming>Flow_2</semantic:incoming>
+      <semantic:outgoing>Flow_3</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Activity_Conferir" name="Conferir Documentação">
+      <semantic:incoming>Flow_3</semantic:incoming>
+      <semantic:outgoing>Flow_4</semantic:outgoing>
+    </semantic:task>
+    <semantic:exclusiveGateway id="Gateway_Completa" name="Completa?">
+      <semantic:incoming>Flow_4</semantic:incoming>
+      <semantic:outgoing>Flow_CompNao</semantic:outgoing>
+      <semantic:outgoing>Flow_CompSim</semantic:outgoing>
+    </semantic:exclusiveGateway>
+    <semantic:sequenceFlow id="Flow_1" sourceRef="Event_Start" targetRef="Activity_Receber" />
+    <semantic:sequenceFlow id="Flow_2" sourceRef="Activity_Receber" targetRef="Activity_Verificar" />
+    <semantic:sequenceFlow id="Flow_3" sourceRef="Activity_Verificar" targetRef="Activity_Conferir" />
+    <semantic:sequenceFlow id="Flow_4" sourceRef="Activity_Conferir" targetRef="Gateway_Completa" />
+    <semantic:sequenceFlow id="Flow_CompNao" name="Não" sourceRef="Gateway_Completa" targetRef="Activity_Devolver" />
+    <semantic:sequenceFlow id="Flow_EndDev" sourceRef="Activity_Devolver" targetRef="Event_EndDevolvido" />
+    <semantic:sequenceFlow id="Flow_CompSim" name="Sim" sourceRef="Gateway_Completa" targetRef="Activity_Encaminhar" />
+    <semantic:sequenceFlow id="Flow_5" sourceRef="Activity_Encaminhar" targetRef="Activity_Comparar" />
+    <semantic:sequenceFlow id="Flow_6" sourceRef="Activity_Comparar" targetRef="Gateway_Parecer" />
+    <semantic:sequenceFlow id="Flow_ParSim" name="Sim" sourceRef="Gateway_Parecer" targetRef="Activity_Parecer" />
+    <semantic:sequenceFlow id="Flow_ParNao" name="Não" sourceRef="Gateway_Parecer" targetRef="Activity_Decisao" />
+    <semantic:sequenceFlow id="Flow_8" sourceRef="Activity_Decisao" targetRef="Gateway_Parcial" />
+    <semantic:sequenceFlow id="Flow_ParcSim" name="Sim" sourceRef="Gateway_Parcial" targetRef="Activity_IndicarComp" />
+    <semantic:sequenceFlow id="Flow_ParcNao" name="Não" sourceRef="Gateway_Parcial" targetRef="Activity_ReceberSec" />
+    <semantic:sequenceFlow id="Flow_9" sourceRef="Activity_IndicarComp" targetRef="Activity_ReceberSec" />
+    <semantic:sequenceFlow id="Flow_10" sourceRef="Activity_ReceberSec" targetRef="Gateway_DadosCompletos" />
+    <semantic:sequenceFlow id="Flow_DadNao" name="Não" sourceRef="Gateway_DadosCompletos" targetRef="Activity_RetornoIncerto" />
+    <semantic:sequenceFlow id="Flow_Retorno" sourceRef="Activity_RetornoIncerto" targetRef="Activity_Parecer" />
+    <semantic:sequenceFlow id="Flow_DadSim" name="Sim" sourceRef="Gateway_DadosCompletos" targetRef="Activity_Registar" />
+    <semantic:sequenceFlow id="Flow_11" sourceRef="Activity_Registar" targetRef="Activity_Comunicar" />
+    <semantic:sequenceFlow id="Flow_12" sourceRef="Activity_Comunicar" targetRef="Event_EndSucesso" />
+    <semantic:endEvent id="Event_EndDevolvido" name="Devolvido">
+      <semantic:incoming>Flow_EndDev</semantic:incoming>
+    </semantic:endEvent>
+    <semantic:task id="Activity_Devolver" name="Devolver e Tratar Duplicidade">
+      <semantic:incoming>Flow_CompNao</semantic:incoming>
+      <semantic:outgoing>Flow_EndDev</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Activity_Comparar" name="Comparar Conteúdo e Carga Horária">
+      <semantic:incoming>Flow_5</semantic:incoming>
+      <semantic:outgoing>Flow_6</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Activity_Encaminhar" name="Encaminhar à Coordenação">
+      <semantic:incoming>Flow_CompSim</semantic:incoming>
+      <semantic:outgoing>Flow_5</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Activity_Decisao" name="Tomar Decisão Final">
+      <semantic:incoming>Flow_ParNao</semantic:incoming>
+      <semantic:incoming>Flow_17idbmm</semantic:incoming>
+      <semantic:outgoing>Flow_8</semantic:outgoing>
+    </semantic:task>
+    <semantic:exclusiveGateway id="Gateway_Parecer" name="Necessita Parecer?">
+      <semantic:incoming>Flow_6</semantic:incoming>
+      <semantic:outgoing>Flow_ParSim</semantic:outgoing>
+      <semantic:outgoing>Flow_ParNao</semantic:outgoing>
+    </semantic:exclusiveGateway>
+    <semantic:sequenceFlow id="Flow_17idbmm" sourceRef="Activity_Parecer" targetRef="Activity_Decisao" />
+    <semantic:exclusiveGateway id="Gateway_Parcial" name="Decisão Parcial?">
+      <semantic:incoming>Flow_8</semantic:incoming>
+      <semantic:outgoing>Flow_ParcSim</semantic:outgoing>
+      <semantic:outgoing>Flow_ParcNao</semantic:outgoing>
+    </semantic:exclusiveGateway>
+    <semantic:task id="Activity_IndicarComp" name="Indicar Conteúdo Complementar">
+      <semantic:incoming>Flow_ParcSim</semantic:incoming>
+      <semantic:outgoing>Flow_9</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Activity_Parecer" name="Analisar e Devolver Parecer">
+      <semantic:incoming>Flow_ParSim</semantic:incoming>
+      <semantic:incoming>Flow_Retorno</semantic:incoming>
+      <semantic:outgoing>Flow_17idbmm</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Activity_RetornoIncerto" name="Devolver à Coordenação (Lacuna)">
+      <semantic:incoming>Flow_DadNao</semantic:incoming>
+      <semantic:outgoing>Flow_Retorno</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Activity_Registar" name="Registar no Sistema">
+      <semantic:incoming>Flow_DadSim</semantic:incoming>
+      <semantic:outgoing>Flow_11</semantic:outgoing>
+    </semantic:task>
+    <semantic:task id="Activity_Comunicar" name="Comunicar Estudante (Portal)">
+      <semantic:incoming>Flow_11</semantic:incoming>
+      <semantic:outgoing>Flow_12</semantic:outgoing>
+    </semantic:task>
+    <semantic:endEvent id="Event_EndSucesso" name="Sucesso">
+      <semantic:incoming>Flow_12</semantic:incoming>
+    </semantic:endEvent>
+    <semantic:task id="Activity_ReceberSec" name="Receber e Avaliar Dados">
+      <semantic:incoming>Flow_ParcNao</semantic:incoming>
+      <semantic:incoming>Flow_9</semantic:incoming>
+      <semantic:outgoing>Flow_10</semantic:outgoing>
+    </semantic:task>
+    <semantic:exclusiveGateway id="Gateway_DadosCompletos" name="Dados Completos?">
+      <semantic:incoming>Flow_10</semantic:incoming>
+      <semantic:outgoing>Flow_DadSim</semantic:outgoing>
+      <semantic:outgoing>Flow_DadNao</semantic:outgoing>
+    </semantic:exclusiveGateway>
+  </semantic:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_UVS" name="Diagrama UVS" resolution="96">
+    <bpmndi:BPMNPlane bpmnElement="Collaboration_UVS">
+      <bpmndi:BPMNShape id="Participant_UVS_di" bpmnElement="Participant_UVS" isHorizontal="true">
+        <dc:Bounds x="100" y="-20" width="1650" height="850" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Secretaria_di" bpmnElement="Lane_Secretaria" isHorizontal="true">
+        <dc:Bounds x="130" y="575" width="1620" height="255" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Secretaria_Sub_di" bpmnElement="Lane_Secretaria_Sub" isHorizontal="true">
+        <dc:Bounds x="160" y="575" width="1590" height="255" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Professor_di" bpmnElement="Lane_Professor" isHorizontal="true">
+        <dc:Bounds x="130" y="400" width="1620" height="175" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Professor_Sub_di" bpmnElement="Lane_Professor_Sub" isHorizontal="true">
+        <dc:Bounds x="160" y="400" width="1590" height="175" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Coordenacao_di" bpmnElement="Lane_Coordenacao" isHorizontal="true">
+        <dc:Bounds x="130" y="270" width="1620" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Coordenacao_Sub_di" bpmnElement="Lane_Coordenacao_Sub" isHorizontal="true">
+        <dc:Bounds x="160" y="270" width="1590" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Atendimento_di" bpmnElement="Lane_Atendimento" isHorizontal="true">
+        <dc:Bounds x="130" y="-20" width="1620" height="290" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_Atendimento_Sub_di" bpmnElement="Lane_Atendimento_Sub" isHorizontal="true">
+        <dc:Bounds x="160" y="-20" width="1590" height="290" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_Start_di" bpmnElement="Event_Start">
+        <dc:Bounds x="200" y="110" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Receber_di" bpmnElement="Activity_Receber">
+        <dc:Bounds x="280" y="88" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Verificar_di" bpmnElement="Activity_Verificar">
+        <dc:Bounds x="420" y="88" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Conferir_di" bpmnElement="Activity_Conferir">
+        <dc:Bounds x="560" y="88" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Completa_di" bpmnElement="Gateway_Completa" isMarkerVisible="true">
+        <dc:Bounds x="700" y="103" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="783" y="123" width="54" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_EndDevolvido_di" bpmnElement="Event_EndDevolvido">
+        <dc:Bounds x="1072" y="42" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1066" y="78" width="49" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Devolver_di" bpmnElement="Activity_Devolver">
+        <dc:Bounds x="800" y="0" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Comparar_di" bpmnElement="Activity_Comparar">
+        <dc:Bounds x="800" y="290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Encaminhar_di" bpmnElement="Activity_Encaminhar">
+        <dc:Bounds x="800" y="170" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Decisao_di" bpmnElement="Activity_Decisao">
+        <dc:Bounds x="1060" y="290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Parecer_di" bpmnElement="Gateway_Parecer" isMarkerVisible="true">
+        <dc:Bounds x="961" y="305" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="961" y="267.5" width="50" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_Parcial_di" bpmnElement="Gateway_Parcial" isMarkerVisible="true">
+        <dc:Bounds x="1235" y="305" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1218" y="281" width="83" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_IndicarComp_di" bpmnElement="Activity_IndicarComp">
+        <dc:Bounds x="1380" y="290" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Parecer_di" bpmnElement="Activity_Parecer">
+        <dc:Bounds x="936" y="440" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_RetornoIncerto_di" bpmnElement="Activity_RetornoIncerto">
+        <dc:Bounds x="1010" y="680" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Registar_di" bpmnElement="Activity_Registar">
+        <dc:Bounds x="1390" y="650" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_Comunicar_di" bpmnElement="Activity_Comunicar">
+        <dc:Bounds x="1530" y="650" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_EndSucesso_di" bpmnElement="Event_EndSucesso">
+        <dc:Bounds x="1670" y="672" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1667" y="708" width="43" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_ReceberSec_di" bpmnElement="Activity_ReceberSec">
+        <dc:Bounds x="1210" y="610" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_DadosCompletos_di" bpmnElement="Gateway_DadosCompletos" isMarkerVisible="true">
+        <dc:Bounds x="1285" y="735" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1280" y="795" width="59" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="236" y="128" />
+        <di:waypoint x="280" y="128" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="380" y="128" />
+        <di:waypoint x="420" y="128" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="520" y="128" />
+        <di:waypoint x="560" y="128" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4">
+        <di:waypoint x="660" y="128" />
+        <di:waypoint x="700" y="128" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_CompNao_di" bpmnElement="Flow_CompNao">
+        <di:waypoint x="725" y="103" />
+        <di:waypoint x="725" y="20" />
+        <di:waypoint x="800" y="20" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="736" y="22" width="21" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_EndDev_di" bpmnElement="Flow_EndDev">
+        <di:waypoint x="900" y="40" />
+        <di:waypoint x="986" y="40" />
+        <di:waypoint x="986" y="60" />
+        <di:waypoint x="1072" y="60" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_CompSim_di" bpmnElement="Flow_CompSim">
+        <di:waypoint x="725" y="153" />
+        <di:waypoint x="725" y="210" />
+        <di:waypoint x="800" y="210" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="749" y="196" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5">
+        <di:waypoint x="850" y="250" />
+        <di:waypoint x="850" y="290" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6">
+        <di:waypoint x="900" y="330" />
+        <di:waypoint x="961" y="330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ParSim_di" bpmnElement="Flow_ParSim">
+        <di:waypoint x="986" y="355" />
+        <di:waypoint x="986" y="440" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="992" y="389" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ParNao_di" bpmnElement="Flow_ParNao">
+        <di:waypoint x="1011" y="330" />
+        <di:waypoint x="1060" y="330" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1044" y="309" width="21" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8">
+        <di:waypoint x="1160" y="330" />
+        <di:waypoint x="1235" y="330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ParcSim_di" bpmnElement="Flow_ParcSim">
+        <di:waypoint x="1285" y="330" />
+        <di:waypoint x="1380" y="330" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1332" y="309" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_ParcNao_di" bpmnElement="Flow_ParcNao">
+        <di:waypoint x="1260" y="355" />
+        <di:waypoint x="1260" y="610" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1265" y="476" width="21" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9">
+        <di:waypoint x="1430" y="370" />
+        <di:waypoint x="1430" y="630" />
+        <di:waypoint x="1310" y="630" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10">
+        <di:waypoint x="1280" y="690" />
+        <di:waypoint x="1280" y="713" />
+        <di:waypoint x="1310" y="713" />
+        <di:waypoint x="1310" y="735" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_DadNao_di" bpmnElement="Flow_DadNao">
+        <di:waypoint x="1285" y="760" />
+        <di:waypoint x="1198" y="760" />
+        <di:waypoint x="1198" y="780" />
+        <di:waypoint x="1060" y="780" />
+        <di:waypoint x="1060" y="760" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1232" y="743" width="21" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_Retorno_di" bpmnElement="Flow_Retorno">
+        <di:waypoint x="1010" y="720" />
+        <di:waypoint x="986" y="720" />
+        <di:waypoint x="986" y="520" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_DadSim_di" bpmnElement="Flow_DadSim">
+        <di:waypoint x="1335" y="760" />
+        <di:waypoint x="1440" y="760" />
+        <di:waypoint x="1440" y="730" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1360" y="738" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11">
+        <di:waypoint x="1490" y="690" />
+        <di:waypoint x="1530" y="690" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12">
+        <di:waypoint x="1630" y="690" />
+        <di:waypoint x="1670" y="690" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_17idbmm_di" bpmnElement="Flow_17idbmm">
+        <di:waypoint x="1036" y="480" />
+        <di:waypoint x="1110" y="480" />
+        <di:waypoint x="1110" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Assoc_2_di" bpmnElement="Assoc_2">
+        <di:waypoint x="800" y="330" />
+        <di:waypoint x="750" y="330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="TextAnnotation_Portal_di" bpmnElement="TextAnnotation_Portal">
+        <dc:Bounds x="300" y="10" width="120" height="40" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Assoc_1_di" bpmnElement="Assoc_1">
+        <di:waypoint x="330" y="88" />
+        <di:waypoint x="330" y="50" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="TextAnnotation_Planilha_di" bpmnElement="TextAnnotation_Planilha">
+        <dc:Bounds x="630" y="310" width="120" height="40" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</semantic:definitions>

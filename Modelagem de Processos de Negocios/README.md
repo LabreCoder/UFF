@@ -29,16 +29,14 @@ A disciplina aborda os conceitos essenciais, metodológicos e tecnológicos para
 | --- | --- | --- | --- |
 | **Aula 01** | Partes de um Negócio e Cadeia de Valor | Teórica | [Acessar](./Aula_1/README.md) |
 | **Aula 02** | Gerenciamento de Processos de Negócio (BPM) | Teórica | [Acessar](./Aula_2/README.md) |
-<!-- | **Aula 03** | [Título da Aula 03] | [Preencher] |
-| **Aula 04** | [Título da Aula 04] | [Preencher] | [Acessar](./Aula_4/README.md) |
-| **Aula 05** | [Título da Aula 05] | [Preencher] | [Acessar](./Aula_5/README.md) |
-| **Aula 06** | [Título da Aula 06] | [Preencher] | [Acessar](./Aula_6/README.md) |
-| **Aula 07** | [Título da Aula 07] | [Preencher] | [Acessar](./Aula_7/README.md) |
-| **Aula 08** | [Título da Aula 08] | [Preencher] | [Acessar](./Aula_8/README.md) |
-| **Aula 09** | [Título da Aula 09] | [Preencher] | [Acessar](./Aula_9/README.md) |
-| **Aula 10** | [Título da Aula 10] | [Preencher] | [Acessar](./Aula_10/README.md) |
-| **Aula 11** | [Título da Aula 11] | [Preencher] | [Acessar](./Aula_11/README.md) |
--->
+| **Aula 03** | Ciclo de BPM, Conceitos e Fundamentos de Processos de Negócio | Teórica | [Acessar](./Aula_3/README.md) |
+| **Aula 04** | Descoberta de Processos de Negócio (AS-IS) | Teórica | [Acessar](./Aula_4/README.md) |
+| **Aula 05** | Modelagem de Processos de Negócio com BPMN — Conceitos | Teórica | [Acessar](./Aula_5/README.md) |
+| **Aula 06** | Modelagem de Processos de Negócio com BPMN — Habilidades | Teórica | [Acessar](./Aula_6/README.md) |
+| **Aula 07** | Análise Qualitativa de Processos | Teórica | [Acessar](./Aula_7/README.md) |
+| **Aula 08** | Análise Quantitativa de Processos | Teórica | [Acessar](./Aula_8/README.md) |
+| **Aula 09** | Redesenho e Melhoria de Processos de Negócio | Teórica | [Acessar](./Aula_9/README.md) |
+| **Aula 10** | Monitoramento de Processos: Frameworks, Qualidade, Governança e Métricas | Teórica | [Acessar](./Aula_10/README.md) |
 
 ---
 

@@ -56,7 +56,7 @@ Apresentação do conceito, das origens e da evolução do **Gerenciamento de Pr
 ### 🧭 Navegação
 
 * ⬅️ **Aula Anterior:** [Aula 01: Partes de um Negócio e Cadeia de Valor](../Aula_1/README.md)
-* ➡️ **Próxima Aula:** [Aula 03: ](../Aula_3/README.md)
+* ➡️ **Próxima Aula:** [Aula 03: Ciclo de BPM, Conceitos e Fundamentos de Processos de Negócio](../Aula_3/README.md)
 
 ---
 
